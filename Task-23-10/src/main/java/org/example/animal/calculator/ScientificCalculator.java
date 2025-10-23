@@ -15,7 +15,8 @@ public class ScientificCalculator extends Calculator {
 
     @Override
     public int add(int a, int b, int c) {
-        System.out.print("Log: " + a + " + " + b + " + " + c + " = ");
+        System.out.print("Log: " + a + " + " + b + " + " + c  +" = ");
         return super.add(a, b, c);
+
     }
 }
