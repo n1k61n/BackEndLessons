@@ -1,21 +1,9 @@
 package org.example;
 
 
-import org.example.account.Account;
 import org.example.account.CheckingAccount;
 import org.example.account.FixedDepositAccount;
 import org.example.account.SavingAccount;
-import org.example.animal.Bird;
-import org.example.animal.Cat;
-import org.example.animal.Dog;
-import org.example.payment.CashPayment;
-import org.example.payment.CreditCardPayment;
-import org.example.payment.PaypalPayment;
-import org.example.shapes.Circle;
-import org.example.shapes.Rectangle;
-import org.example.shapes.Triangle;
-
-import java.util.AbstractCollection;
 
 public class Main {
     public static void main(String[] args) {
@@ -49,14 +37,15 @@ public class Main {
 //        dog.play();
 //        Bird bird = new Bird();
 //        bird.play();
-        Account[] accounts = new Account[3];
-        accounts[0] = new SavingAccount(1000);
-        accounts[1] = new CheckingAccount(2000);
-        accounts[2] = new FixedDepositAccount(3000);
 
-        for (Account account : accounts){
-            account.displayInterest();
-        }
+        double balance = 2000;
+        SavingAccount savingAccount = new SavingAccount(balance);
+        CheckingAccount checkingAccount = new CheckingAccount(balance);
+        FixedDepositAccount fixedDepositAccount = new FixedDepositAccount(balance);
+
+        System.out.println(savingAccount.calculateInterest());
+        System.out.println(checkingAccount.calculateInterest());
+        System.out.println(fixedDepositAccount.calculateInterest());
 
     }
 }

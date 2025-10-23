@@ -7,6 +7,6 @@ public class FixedDepositAccount extends Account{
 
     @Override
     public double calculateInterest() {
-        return balance * 0.1;
+        return super.balance * 0.1;
     }
 }

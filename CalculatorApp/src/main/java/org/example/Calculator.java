@@ -2,22 +2,15 @@ package org.example;
 
 public  class Calculator {
 
-    public double calculate(double x, double y, int  emeliyat){
-        double result  = 0;
-        switch (emeliyat)
+    public double calculate(double x, double y, int  operation){
+        switch (operation)
         {
-            case 1:
-                result = x + y;
-                break;
-            case 2:
-                result =  x - y;
-                break;
-            case 3:
-                result = x * y;
-                break;
+            case 1: return x + y;
+            case 2: return x - y;
+            case 3: return x * y;
             case 4:
                 if (y != 0)
-                    result = x / y;
+                    return  x / y;
                 else{
                     System.out.println("0 bolmek olmaz.");
                 }
@@ -25,7 +18,7 @@ public  class Calculator {
             default:
                 System.out.println("sehv emeliyat daxil edibsiniz.");
         }
-        return  result;
+        return  0;
 
     }
 }
