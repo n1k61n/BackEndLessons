@@ -14,10 +14,9 @@ package org.example;
 //3. Balansı göstər
 //4. Çıxış
 //Hər əməliyyat switch-case ilə seçilir.
-//        📘 OOP prinsipi: Encapsulation
+//📘 OOP prinsipi: Encapsulation
 //📘 Yeni anlayış: Validation və sadə business logic
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
