@@ -36,6 +36,6 @@ public class Task {
     }
 
     public String info(){
-        return this.id + ": " + this.title + " " + this.completed;
+        return this.id + ": " + this.title + "-" + this.completed;
     }
 }

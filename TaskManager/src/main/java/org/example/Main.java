@@ -27,22 +27,33 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    static int ID = 0;
     public static void main(String[] args) {
         boolean exit = true;
         Scanner scanner = new Scanner(System.in);
+        TaskManager tm = new TaskManager();
+        int id;
         while(exit){
             showMenu();
             System.out.println("Secim edin");
             int input = scanner.nextInt();
             switch (input){
                 case 1:
-                    addNewTask();
+                    String title = scanner.nextLine();
+                    tm.addTask(new Task(++ID, title, false));
                     break;
                 case 2:
+                    tm.showAllTasks();
                     break;
                 case 3:
+                    System.out.println("Tamamlanan tapsirigin id-ni daxil edin.");
+                    id = scanner.nextInt();
+                    tm.markAsDone(id);
                     break;
                 case 4:
+                    System.out.println("Silinen tapsirigin id-ni daxil edin.");
+                    id = scanner.nextInt();
+                    tm.deleteTask(id);
                     break;
                 case 5:
                     exit = false;
@@ -53,13 +64,6 @@ public class Main {
         }
     }
 
-    static void addNewTask(){
-        System.out.println("Yeni tapsiriq yazin:");
-        Scanner sc = new Scanner(System.in);
-        String title = sc.nextLine();
-        int id = 0;
-        Task newtask = new Task(id,title, false);
-    }
 
     static void showMenu(){
         String[] lst = {"Yeni tapşırıq əlavə et",

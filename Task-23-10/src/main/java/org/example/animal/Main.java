@@ -78,16 +78,16 @@ public class Main {
 //        sc47.removeTeacher("Senan");
 //        sc47.showAllTeachers();
 
-        Cart cart = new Cart();
+//        Cart cart = new Cart();
+//
+//        cart.addProduct(new Product("Laptop", 1500.0));
+//        cart.addProduct(new Product("Mouse", 25.5));
+//        cart.addProduct(new Product("Kamera", 320.75));
+//
 
-        cart.addProduct(new Product("Laptop", 1500.0));
-        cart.addProduct(new Product("Mouse", 25.5));
-        cart.addProduct(new Product("Kamera", 320.75));
+//        cart.remveProduct("Mouse");
 
-
-        //cart.remveProduct("Mouse");
-
-        cart.showAllProducts();
+//        cart.showAllProducts();
 
 
 
