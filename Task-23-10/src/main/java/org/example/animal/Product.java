@@ -2,7 +2,7 @@ package org.example.animal;
 
 public class Product {
     String name;
-    private final double price;
+    private  double price;
 
 
     public Product(String name, double price) {

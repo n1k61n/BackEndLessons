@@ -44,30 +44,31 @@ public class Main {
         for(Student student : students)
             student.getInfo();*/
 
-/*        List<Product> products = new ArrayList<>();
-        products.add(new Product("Kitab", 40));
-        products.add(new Product("Defter", 10));
-        products.add(new Product("Qelem", 30));
-        products.add(new Product("Karandas", 20));
-
-        int totalPrice = 0;
-        for (Product p : products)
-            totalPrice += p.price;
-        System.out.println("Cemi qiymet: " + totalPrice);*/
+//        List<Product> products = new ArrayList<>();
+//        products.add(new Product("Kitab", 40));
+//        products.add(new Product("Defter", 10));
+//        products.add(new Product("Qelem", 30));
+//        products.add(new Product("Karandas", 20));
+//
+//        int totalPrice = 0;
+//        for (Product p : products)
+//            totalPrice += p.getPrice();
+//        System.out.println("Cemi qiymet: " + totalPrice);
 
 //        List<Student> students = new ArrayList<>();
 //        students.add(new Student("Emin", 44, 44));
 //        students.add(new Student("Vusal", 70,20 ));
 //        students.add(new Student("Kamran", 30, 18));
 
-//        Group bma4 = new Group();
-//        bma4.addStudent(new Student("Emin", 70, 44));
-//        bma4.addStudent(new Student("Vusal", 80, 20));
-//        bma4.addStudent(new Student("kamran", 90, 18));
-//        bma4.addStudent(new Student("Orxan", 60, 21));
-//        System.out.println("Telebe siyahisi:");
-//        bma4.showAll();
-//        System.out.println("Orta qiymet " + bma4.getAverageGrade());
+
+        Group bma4 = new Group();
+        bma4.addStudent(new Student("Emin", 70, 44));
+        bma4.addStudent(new Student("Vusal", 80, 20));
+        bma4.addStudent(new Student("kamran", 90, 18));
+        bma4.addStudent(new Student("Orxan", 60, 21));
+        System.out.println("Telebe siyahisi:");
+        bma4.showAll();
+        System.out.println("Orta qiymet " + bma4.getAverageGrade());
 
 //        School sc47 = new School();
 //        sc47.addTeacher(new Teacher("Gulnara", "Fizika"));
@@ -88,8 +89,6 @@ public class Main {
 //        cart.remveProduct("Mouse");
 
 //        cart.showAllProducts();
-
-
 
 
 

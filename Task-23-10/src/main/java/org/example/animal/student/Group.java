@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
-    List<Student> students;
+    List<Student> students = new ArrayList<>();
 
-    public Group() {
-        students = new ArrayList<>();
-    }
+
 
     public  void addStudent(Student student){
         students.add(student);
@@ -25,7 +23,6 @@ public class Group {
         for(Student s : students){
             sum += s.getGrade();
         }
-
         return sum / students.size();
     }
 }
