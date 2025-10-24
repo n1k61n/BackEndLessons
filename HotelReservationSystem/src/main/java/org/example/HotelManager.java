@@ -15,6 +15,7 @@ class HotelManager {
     }
 
     public void showAllRooms() {
+        System.out.println("-".repeat(55));
         for (Room room : rooms) {
             room.showInfo();
         }
@@ -23,20 +24,28 @@ class HotelManager {
     public void bookRoom(int roomNumber) {
         for (Room room : rooms) {
             if (room.getRoomNumber() == roomNumber) {
-                room.bookRoom();
-                return;
+                if (!room.isBooked) {
+                    room.isBooked = true;
+                    System.out.println("Otaq rezerv olundu.");
+                    break;
+                }else{
+                    System.out.println("Otaq rezerv olunub.");
+                }
             }
         }
-        System.out.println("Otaq tapılmadı.");
     }
 
     public void cancelBooking(int roomNumber) {
         for (Room room : rooms) {
             if (room.getRoomNumber() == roomNumber) {
-                room.cancelBooking();
-                return;
+                if(room.isBooked) {
+                    room.isBooked = false;
+                    System.out.println("Rezerv ləğv olundu.");
+                    break;
+                }else {
+                    System.out.println("Rezerv ləğv olunmadi.");
+                }
             }
         }
-        System.out.println("Otaq tapılmadı.");
     }
 }

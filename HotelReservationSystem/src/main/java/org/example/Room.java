@@ -1,6 +1,6 @@
 package org.example;
 
-class Room {
+abstract class Room {
     protected int roomNumber;
     protected double price;
     protected boolean isBooked;
@@ -15,29 +15,11 @@ class Room {
         return roomNumber;
     }
 
-    public boolean isBooked() {
-        return isBooked;
-    }
 
-    public void bookRoom() {
-        if (!isBooked) {
-            isBooked = true;
-            System.out.println("Otaq rezerv olundu.");
-        } else {
-            System.out.println("Bu otaq artıq rezerv olunub.");
-        }
-    }
 
-    public void cancelBooking() {
-        if (isBooked) {
-            isBooked = false;
-            System.out.println("Rezerv ləğv olundu.");
-        } else {
-            System.out.println(" Bu otaq rezerv olunmayıb.");
-        }
-    }
 
     public void showInfo() {
         System.out.println("Otaq #" + roomNumber + " | Qiymət: " + price + "₼ | Status: " + (isBooked ? "Rezerv olunub 🛏️" : "Boş ✅"));
+        System.out.println("-".repeat(55));
     }
 }
