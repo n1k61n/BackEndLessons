@@ -10,6 +10,10 @@ public class Teacher {
         this.subject = subject;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void info(){
         System.out.println(name + " - " + subject);
     }
