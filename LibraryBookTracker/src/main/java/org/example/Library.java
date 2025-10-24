@@ -8,11 +8,13 @@ public class Library {
     List<Book> books = new ArrayList<>();
 
 
+
+
     //1. Add Book
     public void addBook(Scanner scanner){
         scanner.nextLine();
         System.out.print("Kitabin adini yazin: ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         books.add(new Book(name));
         System.out.println("Kitab ugurla elave edildi!");
     }
@@ -29,7 +31,7 @@ public class Library {
     public void borrowBook(Scanner scanner){
         scanner.nextLine();
         System.out.print("Goturduyunuz kitabin adini yazin: ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         for(Book book : books){
             if(book.title.equals(name)) {
                 book.borrowBook();
@@ -42,7 +44,7 @@ public class Library {
     public void returnBook(Scanner scanner){
         scanner.nextLine();
         System.out.print("Qytarmaq isdediyinizin  kitabin adini yazin: ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
         for(Book book : books){
             if(book.title.equals(name)) {
                 book.returnBook();
