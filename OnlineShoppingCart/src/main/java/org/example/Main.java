@@ -37,35 +37,15 @@ public class Main {
             System.out.println("5. Çıxış");
             System.out.print("Seciminizi edin: ");
 
-            try {
-                choice = scanner.nextInt();
-            }catch (InputMismatchException e){
-                choice = 0;
-            }
-
-
+            choice = scanner.nextInt();
             switch (choice){
-                case 1:
-                    cart.addProduct();
-                    break;
-                case 2:
-                    cart.removeProduct();
-                    break;
-                case 3:
-                    cart.showCart();
-                    break;
-                case 4:
-                    System.out.print("Umumi medleg: ");
-                    System.out.println(cart.getTotalPrice());
-                    break;
-                case 5:
-                    System.out.println("Programdan cixilir....");
-                    break;
-                default:
-                    System.out.println("Secim duzgun edilmeyib.");
+                case 1 -> cart.addProduct(scanner);
+                case 2 -> cart.removeProduct(scanner);
+                case 3 -> cart.showCart();
+                case 4 -> cart.getTotalPrice();
+                case 5 ->  System.out.println("Programdan cixilir....");
+                default -> System.out.println("Secim duzgun edilmeyib.");
             }
-
-
         }while (choice != 5);
     }
 }

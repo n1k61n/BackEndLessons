@@ -8,21 +8,21 @@ public class Cart {
     List<Product> cart = new ArrayList<>();
 
 
-    Scanner scanner = new Scanner(System.in);
 //    addProduct()
-    public void  addProduct(){
-        System.out.print("Mehsulun adini teyin edin:");
+    public void  addProduct(Scanner scanner){
+        System.out.print("Mehsulun adini teyin edin: ");
         String name = scanner.next();
-        System.out.print("Mehsulun qiyetini teyin edin:");
+
+        System.out.print("Mehsulun qiyetini teyin edin: ");
         double price = scanner.nextDouble();
         cart.add(new Product(name, price));
         System.out.println("Mehsul sebete elave olundu.");
     }
 
 //    removeProduct()
-    public void removeProduct(){
+    public void removeProduct(Scanner scanner){
         System.out.print("Silinnen mehsulun adini daxil edin: ");
-        String removeProduct = scanner.next();
+        String removeProduct = scanner.nextLine();
         for(Product p : cart){
             if(p.name.equals(removeProduct)){
                 cart.remove(p);
@@ -41,11 +41,11 @@ public class Cart {
     }
 
 //    getTotalPrice()
-    public double getTotalPrice(){
+    public void getTotalPrice(){
         double total = 0;
         for(Product p : cart){
             total += p.price;
         }
-        return total;
+        System.out.println("Umumi medleg: " + total);
     }
 }
