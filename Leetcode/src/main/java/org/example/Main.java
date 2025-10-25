@@ -7,8 +7,8 @@ import java.util.Arrays;
 public class Main {
     static void main() {
         Solution sol = new Solution();
-        int[] nums = {1,2,3,4};
+        int[][] board = {{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
+        sol.gameOfLife(board);
 
-        System.out.println(Arrays.toString(sol.productExceptSelf(nums)));
     }
 }

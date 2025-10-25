@@ -1,9 +1,57 @@
 package org.example;
 
 import javax.swing.*;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution {
+
+
+//1.Любая живая клетка, у которой меньше двух живых соседей, погибает,
+// как будто из-за недостаточной численности населения.
+// 2.Любая живая клетка с двумя или тремя живыми соседями продолжает
+// существовать в следующем поколении
+// 3.Любая живая клетка, имеющая более трех живых соседей, погибает,
+// как будто из-за перенаселения.
+// 4.Любая мертвая клетка, имеющая ровно три живых соседа, становится
+// живой клеткой, как бы путем размножения.
+    public void gameOfLife(int[][] board) {
+        int m = board.length;
+        int n = board[0].length;
+        int[][] copy = new int[m][n];
+        int neigbors;
+        for(int i =0 ; i < board.length; i++){
+            for(int j = 0; j < board[i].length; j++){
+                neigbors = countNeighbors(board, i, j);
+                if(board[i][j] == 1 && neigbors < 2) copy[i][j] = 0;
+                else if(board[i][j] == 1 && (neigbors == 2 || neigbors == 3)) copy[i][j] = 1;
+                else if(board[i][j] == 1 && neigbors > 3 ) copy[i][j] = 0;
+                else if(board[i][j] == 0 && neigbors == 3 ) copy[i][j] = 1;
+                else  copy[i][j] = board[i][j];
+            }
+        }
+        for (int i = 0; i < copy.length; i++)
+            board[i] = Arrays.copyOf(copy[i], copy[i].length);
+    }
+
+    public int countNeighbors(int[][] board, int x, int y) {
+        int count = 0;
+        int m = board.length;
+        int n = board[0].length;
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; j++) {
+                if (j == 0 && i == 0) continue;
+                int ni = x + i;
+                int nj = y + j;
+                if (ni >= 0 && ni < m && nj >= 0 && nj < n && board[ni][nj] == 1) {
+                    count++;
+                }
+            }
+
+        }
+        return count;
+    }
+
 
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
@@ -74,5 +122,4 @@ public class Solution {
 
         return mex;
     }
-
 }

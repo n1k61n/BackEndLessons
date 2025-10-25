@@ -2,7 +2,15 @@ package org.example;
 
 import java.util.Scanner;
 
+/**
+ * Proqramın giriş nöqtəsi.
+ */
+
+
 public class Main {
+/**
+ * Default constructor — əsas sinifin nümunəsini yaradır.
+ */
     static void main() {
         Scanner scanner = new Scanner(System.in);
         Cart cart = new Cart();

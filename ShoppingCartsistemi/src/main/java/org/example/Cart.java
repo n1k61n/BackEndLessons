@@ -3,10 +3,16 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Səbət sinifi — məhsulları əlavə/silmə və ümumi məbləği hesablamaq üçün.
+ */
 public class Cart {
     ArrayList<Product> products = new ArrayList<>();
 
-// addProduct(Product p)
+    /**
+     * Scanner vasitəsilə məhsul əlavə edir.
+     * @param scanner İstifadəçi girişini oxumaq üçün
+     */
     public void addProduct(Scanner scanner){
         System.out.print("Mehsulun adini yazin: ");
         String name = scanner.nextLine();
@@ -17,7 +23,10 @@ public class Cart {
     }
 
 
-//o removeProduct(String name)
+    /**
+     * Scanner vasitəsilə məhsulu silir.
+     * @param scanner İstifadəçi girişini oxumaq üçün
+     */
     public void removeProduct(Scanner scanner){
         System.out.print("Silinen mehsulun adini yazin: ");
         String silinen = scanner.nextLine();
@@ -27,7 +36,9 @@ public class Cart {
             System.out.println("Mehsul tapilmadi");
     }
 
-//o calculateTotal() → ümumi qiymət
+    /**
+     * Səbətdəki məhsulların ümumi qiymətini hesablayır.
+     */
     public void calculateTotal(){
         double totalPrice = 0;
         for(Product product : products){
@@ -35,14 +46,14 @@ public class Cart {
         }
         System.out.println("Umumi qiymet: " + totalPrice);
     }
-//o showAllProducts()
 
+    /**
+     * Bütün məhsulları ekrana çıxarır.
+     */
     public void showAllProducts(){
         System.out.println("Sebetde olan mehsullar.");
         System.out.println("-".repeat(60));
-        for(Product product : products){
-            System.out.println(product);
-        }
+        products.forEach(p -> System.out.println(p));
         System.out.println("-".repeat(60));
     }
 }
