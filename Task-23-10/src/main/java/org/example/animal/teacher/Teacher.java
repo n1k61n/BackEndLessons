@@ -9,8 +9,9 @@ public class Teacher {
         this.subject = subject;
     }
 
-    public void info() {
-        System.out.print("Muellim: " + this.name);
-        System.out.println(", Fenn: " + this.subject);
+
+
+    public String toString(){
+        return name + " " + subject;
     }
 }

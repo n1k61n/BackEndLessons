@@ -61,37 +61,34 @@ public class Main {
 //        students.add(new Student("Kamran", 30, 18));
 
 
-        Group bma4 = new Group();
-        bma4.addStudent(new Student("Emin", 70, 44));
-        bma4.addStudent(new Student("Vusal", 80, 20));
-        bma4.addStudent(new Student("kamran", 90, 18));
-        bma4.addStudent(new Student("Orxan", 60, 21));
-        System.out.println("Telebe siyahisi:");
-        bma4.showAll();
-        System.out.println("Orta qiymet " + bma4.getAverageGrade());
-
+//        Group bma4 = new Group();
+//        bma4.addStudent(new Student("Emin", 70, 44));
+//        bma4.addStudent(new Student("Vusal", 80, 20));
+//        bma4.addStudent(new Student("kamran", 90, 18));
+//        bma4.addStudent(new Student("Orxan", 60, 21));
+//        System.out.println("Telebe siyahisi:");
+//        bma4.showAll();
+//        System.out.println("Orta qiymet " + bma4.getAverageGrade());
+//
 //        School sc47 = new School();
-//        sc47.addTeacher(new Teacher("Gulnara", "Fizika"));
+//        sc47.addTeacher(new Teacher("Qasim", "Fizika"));
 //        sc47.addTeacher(new Teacher("Senan", "Informatika"));
-//        sc47.addTeacher(new Teacher("Qasim", "Kimya"));
+//        sc47.addTeacher(new Teacher("Orxan", "Kimya"));
 //        sc47.addTeacher(new Teacher("Tebriz", "Riyaziyyat"));
 //
 //        sc47.removeTeacher("Senan");
 //        sc47.showAllTeachers();
 
-//        Cart cart = new Cart();
-//
-//        cart.addProduct(new Product("Laptop", 1500.0));
-//        cart.addProduct(new Product("Mouse", 25.5));
-//        cart.addProduct(new Product("Kamera", 320.75));
-//
+        Cart cart = new Cart();
 
-//        cart.remveProduct("Mouse");
-
-//        cart.showAllProducts();
+        cart.addProduct(new Product("Laptop", 1500.0));
+        cart.addProduct(new Product("Kamera", 320.75));
+        cart.addProduct(new Product("Mouse", 25.5));
 
 
+        cart.removeProduct("Mouse");
 
+        cart.showAllProducts();
 
     }
 }

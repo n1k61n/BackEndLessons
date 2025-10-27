@@ -14,7 +14,7 @@ public class Product {
         return price;
     }
 
-    public void getInfo(){
-        System.out.println("Mehsul: " + name + ", Qitmeti: " + price + " AZN");
+    public String toString(){
+        return "Mehsul: " + name + ", Qitmeti: " + price + " AZN";
     }
 }

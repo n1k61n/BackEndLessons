@@ -4,27 +4,32 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Player sample = new Player("Sample", true);
-        Player random = new Player("Random", true);
+        int rounds = 100;
 
+        Bot bot1 = new Bot(new TitForTat(), rounds);
+        Bot bot2 = new Bot(new AlwaysDefect(), rounds);
 
-        for(byte i = 0 ; i < 100; i++){
-            if(sample.isChoice() == true && random.isChoice() == true){
-                sample.setScore(3);
-                random.setScore(3);
+        for (int i = 0; i < rounds; i++) {
+            boolean move1 = bot1.makeMove(i, bot2.getHistory());
+            boolean move2 = bot2.makeMove(i, bot1.getHistory());
+
+            // Scoring logic
+            if (move1 && move2) {
+                bot1.addScore(3);
+                bot2.addScore(3);
+            } else if (!move1 && !move2) {
+                bot1.addScore(1);
+                bot2.addScore(1);
+            } else if (move1 && !move2) {
+                bot1.addScore(0);
+                bot2.addScore(5);
+            } else {
+                bot1.addScore(5);
+                bot2.addScore(0);
             }
-            else if (sample.isChoice() == true && random.isChoice() == false)
-                random.setScore(5);
-            else if (sample.isChoice() == false && random.isChoice() == true)
-                sample.setScore(5);
-            else{
-                sample.setScore(1);
-                random.setScore(1);
-            }
-
-            random.setChoice((int)(Math.random() * 2) == 1);
         }
-        System.out.println(sample);
-        System.out.println(random);
+
+        System.out.println("Bot 1 score: " + bot1.getScore());
+        System.out.println("Bot 2 score: " + bot2.getScore());
     }
 }

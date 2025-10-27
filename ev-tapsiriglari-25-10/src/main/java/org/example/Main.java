@@ -29,14 +29,13 @@ public class Main {
 //        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(10, 34, 2, 89, 55));
 //        printArray(numbers);
 //        findMax(numbers);
-
-        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(5, 1, 5, 2, 3, 1, 4, 2));
-        nums.add(4);
-        setUnikal(nums);
-
-
+//
+//        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(5, 1, 5, 2, 3, 1, 4, 2));
+//        nums.add(4);
+//        setUnikal(nums);
 
     }
+
     static void printArray(ArrayList<?> list){
         for (Object item : list) System.out.println(item);
     }

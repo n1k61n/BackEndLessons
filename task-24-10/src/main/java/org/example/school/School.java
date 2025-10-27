@@ -8,8 +8,6 @@ import java.util.List;
 public class School {
     List<Teacher> teachers = new ArrayList<Teacher>();
 
-
-
     public void addTeacher(Teacher teacher){
         teachers.add(teacher);
     }
@@ -21,9 +19,7 @@ public class School {
         else{
             System.out.println("Muellim tapilmadi");
         }
-
     }
-
 
     public void showAllTeachers(){
         for(Teacher teacher : teachers)
