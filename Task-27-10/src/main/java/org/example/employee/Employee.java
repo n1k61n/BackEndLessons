@@ -18,7 +18,6 @@ public class Employee implements Info {
     }
 
 
-
     @Override
     public void showInfo() {
         System.out.println("Ad: " + name);
@@ -26,4 +25,5 @@ public class Employee implements Info {
         System.out.println("Maaş: " + calculateSalary());
         System.out.println("-".repeat(20));
     }
+
 }

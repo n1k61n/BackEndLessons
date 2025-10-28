@@ -1,7 +1,15 @@
 package org.example.grade;
 
 public enum Grade {
-    A, B, C, D, F;
+    A(90-100), B(80-89), C(70-79), D(60-69), F(0-60);
+
+
+    public final int GRADE;
+
+    Grade(int grade) {
+        GRADE = grade;
+    }
+
 
     public static Grade fromScore(int score) {
         if (score >= 90) return A;

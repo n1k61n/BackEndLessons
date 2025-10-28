@@ -9,8 +9,7 @@ public class BankAccount implements Info {
     private double balance;
     private AccountType type;
 
-    public BankAccount() {
-    }
+
 
     public BankAccount(String ownerName, double balance, AccountType type) {
         this.id = ++idCounter;

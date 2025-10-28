@@ -1,7 +1,12 @@
 package org.example;
 
+import org.example.bank.AccountType;
+import org.example.bank.Bank;
+import org.example.bank.BankAccount;
 import org.example.car.Car;
 import org.example.car.CarType;
+import org.example.employee.Employee;
+import org.example.employee.Rank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +24,13 @@ public class Main {
 //        bank.showAllBankAccounts();
 
         //task 2
-//        List<Employee>  employees = new ArrayList<>();
-//        employees.add(new Employee("Emin", 500.0, Rank.JUNIOR));
-//        employees.add(new Employee("Senan", 4000.0, Rank.LEAD));
-//        employees.add(new Employee("Kenan", 1000.0, Rank.MID));
-//        employees.add(new Employee("Orxan", 2000.0, Rank.SENIOR));
-//
-//        employees.forEach(Employee::showinfo);
+        List<Employee>  employees = new ArrayList<>();
+        employees.add(new Employee("Emin", 500.0, Rank.JUNIOR));
+        employees.add(new Employee("Senan", 4000.0, Rank.LEAD));
+        employees.add(new Employee("Kenan", 1000.0, Rank.MID));
+        employees.add(new Employee("Orxan", 2000.0, Rank.SENIOR));
+
+        employees.forEach(Employee::showInfo);
 
         //employees.forEach(e -> System.out.println(e.calculateSalary()));
 
@@ -66,22 +71,22 @@ public class Main {
 //            }
 //        });
         //task5
-        List<Car> cars = new ArrayList<>();
-        cars.add(new Car("Toyota", "Camry", 55.0, CarType.SEDAN));
-        cars.add(new Car("Hyundai", "Tucson", 65.0, CarType.SUV));
-        cars.add(new Car("Ford", "F-150", 80.0, CarType.TRUCK));
-        cars.add(new Car("BMW", "X5", 90.0, CarType.SUV));
-        cars.add(new Car("Mazda", "MX-5", 75.0, CarType.SPORT));
-
-        cars.forEach(Car::showInfo);
-        System.out.println();
-
-
-        for(Car car : cars){
-            if (car.getType() == CarType.SUV){
-                car.showInfo();
-            }
-        }
+//        List<Car> cars = new ArrayList<>();
+//        cars.add(new Car("Toyota", "Camry", 55.0, CarType.SEDAN));
+//        cars.add(new Car("Hyundai", "Tucson", 65.0, CarType.SUV));
+//        cars.add(new Car("Ford", "F-150", 80.0, CarType.TRUCK));
+//        cars.add(new Car("BMW", "X5", 90.0, CarType.SUV));
+//        cars.add(new Car("Mazda", "MX-5", 75.0, CarType.SPORT));
+//
+//        cars.forEach(Car::showInfo);
+//        System.out.println();
+//
+//
+//        for(Car car : cars){
+//            if (car.getType() == CarType.SUV){
+//                car.showInfo();
+//            }
+//        }
 
 
 

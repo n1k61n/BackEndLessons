@@ -1,6 +1,8 @@
 package org.example.market;
 
-public class Product{
+import org.example.Info;
+
+public class Product implements Info {
     private String name;
     private double price;
     private Category category;
@@ -16,6 +18,13 @@ public class Product{
     }
 
     public void getInfo(){
+        System.out.print("Adi: " + name);
+        System.out.print(" Qiymeti: " + price);
+        System.out.println(" Kategoriyasi: " + category);
+    }
+
+    @Override
+    public void showInfo() {
         System.out.print("Adi: " + name);
         System.out.print(" Qiymeti: " + price);
         System.out.println(" Kategoriyasi: " + category);
