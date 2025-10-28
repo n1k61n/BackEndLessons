@@ -1,35 +1,41 @@
 package org.example;
 
-
-
 public class Main {
     public static void main(String[] args) {
-        int rounds = 100;
 
-        Bot bot1 = new Bot(new TitForTat(), rounds);
-        Bot bot2 = new Bot(new AlwaysDefect(), rounds);
+        Sample sample = new Sample("Sample", true);
+        Friedman friedman = new Friedman("Friedman", true);
+        Joss joss = new Joss("Joss", true);
+        TitForTat titForTat = new TitForTat("Tit for Tat", true);
+        RandomStrategy randomStrategy = new RandomStrategy("Random", true);
 
-        for (int i = 0; i < rounds; i++) {
-            boolean move1 = bot1.makeMove(i, bot2.getHistory());
-            boolean move2 = bot2.makeMove(i, bot1.getHistory());
-
-            // Scoring logic
-            if (move1 && move2) {
-                bot1.addScore(3);
-                bot2.addScore(3);
-            } else if (!move1 && !move2) {
-                bot1.addScore(1);
-                bot2.addScore(1);
-            } else if (move1 && !move2) {
-                bot1.addScore(0);
-                bot2.addScore(5);
-            } else {
-                bot1.addScore(5);
-                bot2.addScore(0);
-            }
+        for(int i = 0; i < 200; i++){
+            gameRound(titForTat, joss);
         }
+        System.out.println(titForTat);
+        System.out.println(joss);
 
-        System.out.println("Bot 1 score: " + bot1.getScore());
-        System.out.println("Bot 2 score: " + bot2.getScore());
+
+
+
+    }
+
+    static void gameRound(Player p1, Player p2){
+        boolean choicePLayer1 = p1.strategy(p2.getHistory());
+        boolean choicePlayer2 = p2.strategy(p1.getHistory());
+        if(choicePLayer1 && choicePlayer2){
+            p1.setScore(3);
+            p2.setScore(3);
+        }
+        else if (choicePLayer1 && choicePlayer2){
+            p2.setScore(5);
+        }
+        else if (choicePLayer1 && choicePlayer2){
+            p1.setScore(5);
+        }
+        else{
+            p1.setScore(1);
+            p2.setScore(1);
+        }
     }
 }

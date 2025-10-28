@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nəticə</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 24px; background:#f7f7f7; }
+        .box { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+        .summary { font-size:18px; margin-bottom:12px; }
+        .wrong-list { color:#b00; }
+        a { display:inline-block; margin-top:12px; }
+        button { padding:8px 14px; border-radius:6px; border:none; cursor:pointer; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>Nəticə</h1>
+    <div class="summary">
+        <p th:text="'Ümumi sual: ' + ${total}"></p>
+        <p th:text="'Doğru: ' + ${correct}"></p>
+        <p th:text="'Səhv: ' + ${wrong}"></p>
+    </div>
+
+    <div th:if="${wrongList.size() > 0}">
+        <h3>Səhv cavab verilən suallar:</h3>
+        <p class="wrong-list" th:text="${wrongList}"></p>
+    </div>
+
+    <a href="/"><button>Yenidən</button></a>
+</div>
+</body>
+</html>
