@@ -4,10 +4,10 @@ public enum Grade {
     A(90-100), B(80-89), C(70-79), D(60-69), F(0-60);
 
 
-    public final int grade;
+    public final int score;
 
-    Grade(int grade){
-        this.grade = grade;
+    Grade(int score){
+        this.score = score;
     }
 
 

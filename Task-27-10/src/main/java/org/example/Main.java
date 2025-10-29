@@ -9,6 +9,8 @@ import org.example.employee.Employee;
 import org.example.employee.Rank;
 import org.example.grade.Student;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,21 +58,21 @@ public class Main {
 //        });
 
         //task 4
-        List<Student> students = new ArrayList<>();
-        students.add(new Student("Aysel", 95));
-        students.add(new Student("Murad", 88));
-        students.add(new Student("Leyla", 76));
-        students.add(new Student("Tural", 59));
-        students.add(new Student("Nigar", 82));
-
-
-        students.forEach(student -> System.out.println(student));
-        System.out.println();
-        students.forEach(student -> {
-            if (student.getScore() >= 80) {
-                student.showInfo();
-            }
-        });
+//        List<Student> students = new ArrayList<>();
+//        students.add(new Student("Aysel", 95));
+//        students.add(new Student("Murad", 88));
+//        students.add(new Student("Leyla", 76));
+//        students.add(new Student("Tural", 59));
+//        students.add(new Student("Nigar", 82));
+//
+//
+//        students.forEach(student -> System.out.println(student));
+//        System.out.println();
+//        students.forEach(student -> {
+//            if (student.getScore() >= 80) {
+//                student.showInfo();
+//            }
+//        });
         //task5
 //        List<Car> cars = new ArrayList<>();
 //        cars.add(new Car("Toyota", "Camry", 55.0, CarType.SEDAN));
@@ -111,6 +113,26 @@ public class Main {
 //                book.showInfo();
 //            }
 //        }
+
+//
+//        String name = "Emin";
+//        name = name.concat(" Salam");
+//        System.out.println(name);
+//
+//        StringBuilder text = new StringBuilder();
+//        text.append("hello");
+//        text.append(" world!");
+//        System.out.println(text);
+
+        LocalDateTime myDateObj = LocalDateTime.now();
+        System.out.println("Before formatting: " + myDateObj);
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+
+        String formattedDate = myDateObj.format(myFormatObj);
+        System.out.println("After formatting: " + formattedDate);
+
+
+
 
 
     }
