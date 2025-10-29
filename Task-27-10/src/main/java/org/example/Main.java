@@ -7,6 +7,7 @@ import org.example.car.Car;
 import org.example.car.CarType;
 import org.example.employee.Employee;
 import org.example.employee.Rank;
+import org.example.grade.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,13 +25,13 @@ public class Main {
 //        bank.showAllBankAccounts();
 
         //task 2
-        List<Employee>  employees = new ArrayList<>();
-        employees.add(new Employee("Emin", 500.0, Rank.JUNIOR));
-        employees.add(new Employee("Senan", 4000.0, Rank.LEAD));
-        employees.add(new Employee("Kenan", 1000.0, Rank.MID));
-        employees.add(new Employee("Orxan", 2000.0, Rank.SENIOR));
-
-        employees.forEach(Employee::showInfo);
+//        List<Employee>  employees = new ArrayList<>();
+//        employees.add(new Employee("Emin", 500.0, Rank.JUNIOR));
+//        employees.add(new Employee("Senan", 4000.0, Rank.LEAD));
+//        employees.add(new Employee("Kenan", 1000.0, Rank.MID));
+//        employees.add(new Employee("Orxan", 2000.0, Rank.SENIOR));
+//
+//        employees.forEach(Employee::showInfo);
 
         //employees.forEach(e -> System.out.println(e.calculateSalary()));
 
@@ -55,21 +56,21 @@ public class Main {
 //        });
 
         //task 4
-//        List<Student> students = new ArrayList<>();
-//        students.add(new Student("Aysel", 95));
-//        students.add(new Student("Murad", 88));
-//        students.add(new Student("Leyla", 76));
-//        students.add(new Student("Tural", 59));
-//        students.add(new Student("Nigar", 82));
-//
-//
-//        students.forEach(Student::showInfo);
-//        System.out.println();
-//        students.forEach(student -> {
-//            if (student.getScore() >= 80) {
-//                student.showInfo();
-//            }
-//        });
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Aysel", 95));
+        students.add(new Student("Murad", 88));
+        students.add(new Student("Leyla", 76));
+        students.add(new Student("Tural", 59));
+        students.add(new Student("Nigar", 82));
+
+
+        students.forEach(student -> System.out.println(student));
+        System.out.println();
+        students.forEach(student -> {
+            if (student.getScore() >= 80) {
+                student.showInfo();
+            }
+        });
         //task5
 //        List<Car> cars = new ArrayList<>();
 //        cars.add(new Car("Toyota", "Camry", 55.0, CarType.SEDAN));
@@ -87,11 +88,30 @@ public class Main {
 //                car.showInfo();
 //            }
 //        }
-
-
-
+        //task 6
+//
+//        List<Book> library = new ArrayList<>();
+//        library.add(new Book("Romeo Julyeta", "Uilyam Shekspier", Genre.FICTION, Status.AVAILABLE));
+//        library.add(new Book("1984", "George Orwell", Genre.FICTION, Status.AVAILABLE));
+//        library.add(new Book("A Brief History of Time", "Stephen Hawking", Genre.SCIENCE, Status.BORROWED));
+//        library.add(new Book("Sapiens", "Yuval Noah Harari", Genre.HISTORY, Status.RESERVED));
+//        library.add(new Book("Harry Potter", "J.K. Rowling", Genre.FANTASY, Status.AVAILABLE));
+//        library.add(new Book("Educated", "Tara Westover", Genre.NONFICTION, Status.AVAILABLE));
+//
+//        System.out.println("📚 Bütün Kitablar:");
+//        library.forEach(book -> {
+//            if (book.getGenre() == Genre.FICTION) {
+//                book.borrowBook();
+//            }
+//        });
+//
+//        System.out.println("\n✅ Mövcud Kitablar (AVAILABLE):");
+//        for (Book book : library) {
+//            if (book.getStatus() == Status.AVAILABLE) {
+//                book.showInfo();
+//            }
+//        }
 
 
     }
 }
-

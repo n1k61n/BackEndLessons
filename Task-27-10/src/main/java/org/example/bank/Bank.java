@@ -1,6 +1,7 @@
 package org.example.bank;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Bank {
@@ -22,12 +23,14 @@ public class Bank {
     }
 
     public  void withDrawDeposit(String name, double amount){
-        for (BankAccount bankAccount : bankAccounts) {
-            if (bankAccount.getOwnerName().equalsIgnoreCase(name)){
-                bankAccount.withdraw(amount);
+        Iterator<BankAccount> iterator = bankAccounts.iterator();
+        while(iterator.hasNext()){
+            BankAccount account = iterator.next();
+            if(account.getOwnerName().equalsIgnoreCase(name)){
+                account.withdraw(amount);
+                break;
             }
         }
-
     }
 
 

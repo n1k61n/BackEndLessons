@@ -10,7 +10,7 @@ public class Student implements Info {
     public Student(String name, int score) {
         this.name = name;
         this.score = score;
-        this.grade = Grade.fromScore(score);
+        this.grade = Grade.getFromScore(score);
     }
 
     public int getScore() {
@@ -21,5 +21,9 @@ public class Student implements Info {
         System.out.print("Adi: " + name);
         System.out.print("\tBali: " + score);
         System.out.println("\tQiymeti: " + grade);
+    }
+
+    public String toString(){
+        return "Ad: " + name + "\tBal: " + score + "\tderece: " + grade;
     }
 }
