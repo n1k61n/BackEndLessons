@@ -6,10 +6,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-//        AdvancedVolumeCalculator avc = new AdvancedVolumeCalculator();
-//        System.out.println(avc.volume(3.0));
+        VolumeCalculator volumeCalculator = new VolumeCalculator();
+        System.out.println(volumeCalculator.volume(3));
+
+        AdvancedVolumeCalculator avc = new AdvancedVolumeCalculator();
+        System.out.println(avc.volume(3.0));
 //        System.out.println(avc.volume(5,3,2));
-//        System.out.println(avc.volume(4));
+//        System.out.println(avc.volume(3));
 
 
 //            List<Product> products = new ArrayList<>();
@@ -95,8 +98,10 @@ public class Main {
 //        orders.forEach(order -> System.out.println(order));
 
 
-        DayOfWeek d = DayOfWeek.getDayOfWeek(2);
-        System.out.println("Day 2 is: " + d);
+//        DayOfWeek d = DayOfWeek.getDayOfWeek(2);
+//        System.out.println("Day 2 is: " + d);
+//        Integer a = 127, b = 127;
+//        System.out.println(a==b);
 
 
 
