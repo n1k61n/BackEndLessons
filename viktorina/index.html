@@ -1,120 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="utf-8">
-  <title>Java Quiz – Test Seçimi ilə</title>
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;margin:24px}
-    h1{color:#2563eb;text-align:center}
-    .card{background:white;padding:16px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
-    .question{font-weight:bold;margin-bottom:8px}
-    .options label{display:block;margin:4px 0}
-    button{background:#2563eb;color:white;border:none;padding:10px 18px;border-radius:6px;font-size:16px;cursor:pointer}
-    .footer{text-align:center;margin-top:16px}
-    .result{background:white;padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
-    .wrong{color:#b91c1c}
-    .center{text-align:center;margin-top:60px}
-    select{padding:8px 12px;font-size:16px;border-radius:6px;border:1px solid #ccc;margin-right:8px}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Java Viktorina</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #ffffff; color: #222; margin: 0; padding: 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { text-align: center; }
+  .question { background: #f9f9f9; padding: 14px; margin: 12px 0; border-radius: 8px; border: 1px solid #eee; }
+  .q-text { font-weight: bold; margin-bottom: 8px; }
+  label { display:block; margin:4px 0; cursor: pointer; }
+  .controls { text-align: center; margin: 20px 0; }
+  button { background: #28a745; color:#fff; border:none; padding:10px 20px; font-size:16px; border-radius:8px; cursor:pointer;}
+  button:hover { opacity: 0.95; }
+  .small { font-size: 14px; color:#666; text-align:center; margin-top:6px; }
+  @media (max-width:600px){ .question{padding:10px;} button{width:100%;} }
+</style>
 </head>
 <body>
-  <h1>Java Quiz</h1>
-
-  <!-- SELECTION MENU -->
-  <div id="menu" class="center">
-    <p>Test dəstini seç:</p>
-    <select id="quizSelect">
-      <option value="">-- Seçin --</option>
-      <option value="questions.json">Test 1 – Əsas 50 sual</option>
-      <option value="questions2.json">Test 2 – Yeni 50 sual</option>
-    </select>
-    <button id="btnStart">Başla</button>
-  </div>
-
-  <!-- QUIZ AREA -->
-  <div id="quizArea" style="display:none;">
+  <div class="container">
+    <h1>☕ Java Viktorina — Sadə Dizayn</h1>
+    <p class="small">50 sual. Hər sualda bir cavab seç. Sonda "Nəticə" düyməsinə bas.</p>
     <div id="quiz"></div>
-    <div class="footer">
-      <button id="btnResult">Nəticə</button>
+    <div class="controls">
+      <button id="resultBtn">Nəticə</button>
     </div>
   </div>
 
-  <!-- RESULT -->
-  <div id="result" style="display:none" class="result"></div>
-
+<script src="questions.js"></script>
 <script>
-let questions = [];
-
-document.getElementById("btnStart").addEventListener("click", async ()=>{
-  const file = document.getElementById("quizSelect").value;
-  if(!file){ alert("Zəhmət olmasa test dəsti seçin!"); return; }
-
-  const res = await fetch(file);
-  questions = await res.json();
-  renderQuestions();
-  document.getElementById("menu").style.display="none";
-  document.getElementById("quizArea").style.display="block";
-  window.scrollTo(0,0);
-});
-
-function renderQuestions(){
-  const quizDiv = document.getElementById("quiz");
-  quizDiv.innerHTML = "";
-  for(const q of questions){
-    const card = document.createElement("div");
-    card.className = "card";
-
-    const title = document.createElement("div");
-    title.className = "question";
-    title.textContent = q.id + "️⃣ " + q.text;
-    card.appendChild(title);
-
-    const opts = document.createElement("div");
-    opts.className = "options";
-    q.options.forEach((opt, i)=>{
-      const letter = String.fromCharCode(65+i);
-      const lbl = document.createElement("label");
-      lbl.innerHTML = `<input type="radio" name="q${q.id}" value="${letter}"> ${letter}) ${opt}`;
-      opts.appendChild(lbl);
+(function(){
+  const quizDiv = document.getElementById('quiz');
+  QUESTIONS.forEach((qObj, idx) => {
+    const div = document.createElement('div');
+    div.className = 'question';
+    const qHtml = document.createElement('div');
+    qHtml.className = 'q-text';
+    qHtml.textContent = qObj.q;
+    div.appendChild(qHtml);
+    qObj.options.forEach(opt => {
+      const id = 'q' + idx + '_' + opt.replace(/[^a-z0-9]/gi, '');
+      const label = document.createElement('label');
+      label.innerHTML = '<input type="radio" name="q' + idx + '" value="' + opt + '"> ' + opt;
+      div.appendChild(label);
     });
-    card.appendChild(opts);
-    quizDiv.appendChild(card);
-  }
-}
+    quizDiv.appendChild(div);
+  });
 
-document.getElementById("btnResult").addEventListener("click", ()=>{
-  let correct=0;
-  let wrongList=[];
-  for(const q of questions){
-    const checked = document.querySelector(`input[name="q${q.id}"]:checked`);
-    const ans = checked ? checked.value : null;
-    if(ans===q.correct) correct++;
-    else wrongList.push(q.id);
-  }
-  const total = questions.length;
-  const wrong = total - correct;
-
-  const resultDiv = document.getElementById("result");
-  resultDiv.innerHTML = `
-    <h2>Nəticə</h2>
-    <p>Ümumi sual: <b>${total}</b></p>
-    <p>Doğru: <b>${correct}</b></p>
-    <p>Səhv: <b>${wrong}</b></p>
-    ${wrongList.length ? `<p class="wrong">Səhv verilən suallar: ${wrongList.join(", ")}</p>` : "<p>Bütün cavablar doğrudur! 🎉</p>"}
-    <div style='margin-top:10px'>
-      <button onclick="restart()">Yenidən test seç</button>
-    </div>
-  `;
-  document.getElementById("quizArea").style.display="none";
-  resultDiv.style.display="block";
-});
-
-function restart(){
-  document.getElementById("menu").style.display="block";
-  document.getElementById("quizArea").style.display="none";
-  document.getElementById("result").style.display="none";
-  document.querySelectorAll("input[type=radio]").forEach(r=>r.checked=false);
-}
+  document.getElementById('resultBtn').addEventListener('click', function(){
+    const wrong = [];
+    QUESTIONS.forEach((q, i) => {
+      const sel = document.querySelector('input[name="q' + i + '"]:checked');
+      if (!sel || sel.value !== q.answer) {
+        wrong.push({no: i+1, q: q.q, correct: q.answer, explanation: q.explanation});
+      }
+    });
+    localStorage.setItem('javaQuizWrong', JSON.stringify(wrong));
+    // open results page
+    window.location.href = 'results.html';
+  });
+})();
 </script>
 </body>
 </html>
