@@ -7,14 +7,14 @@ public class Car {
     private int year;
     private double fuelLevel;
     private double  distance;
-    private int electric;
+    private double battery;
 
-    public Car(String brand, String model, int year, double fuelLevel) {
+    public Car(String brand, String model, int year, double fuel, double battery) {
         this.brand = brand;
         this.model = model;
         this.year = year;
-        this.fuelLevel = fuelLevel;
-        this.electric = 20;
+        this.fuelLevel = fuel;
+        this.battery = battery;
     }
 
 
@@ -22,21 +22,18 @@ public class Car {
         return brand;
     }
 
-    public void drive(int distance){
-        double moveDistance = calculateDistance(distance);
+    public void drive(double distance){
+        double fromFuel = calculateDistanceFromFuel();
+        double fromBattery = calculateDistanceFromBattery();
+        double moveDistance = fromBattery + fromFuel;
         if(moveDistance >= distance){
             this.distance += distance;
-            double spentFuel = distance / 10.0;
-            if(this.fuelLevel >= spentFuel){
-                this.fuelLevel -= spentFuel;
-            }
-            else{
-                int leftDistance = distance - (int)(this.fuelLevel * 10);
-                this.fuelLevel = 0;
-                if (leftDistance * 3 >= this.electric)
-                    this.electric -= leftDistance * 3;
-                else
-                    System.out.println("Not enough gaz...");
+            if(fromFuel >= distance){
+                this.fuelLevel -= distance / 10.0;
+            }else{
+                double leftDistance = distance  - (this.fuelLevel * 10);
+                this.fuelLevel -= this.fuelLevel;
+                this.battery -= leftDistance / 3.0;
             }
         }
         else {
@@ -44,12 +41,17 @@ public class Car {
         }
     }
 
-    private double calculateDistance(int distance){
-        return this.fuelLevel * 10 + this.electric * 3;
+    private double calculateDistanceFromFuel(){
+        return this.fuelLevel * 10;
     }
 
+    private double calculateDistanceFromBattery(){
+        return this.battery * 2;
+    }
+
+
     public void reWatt(int watt){
-        this.electric += watt;
+        this.battery += watt;
     }
 
     public void refuel(double liters){
@@ -57,8 +59,8 @@ public class Car {
     }
 
     public String toString() {
-        String info = "Brand: %s. Model: %s. Year: %d. Fuel level: %.2f. Watt: %d. Distance: %.2f";
-        return String.format(info, brand, model, year, fuelLevel, electric, distance);
+        String info = "Brand: %s. Model: %s. Year: %d. Fuel level: %.2f. Watt: %.2f. Distance: %.2f";
+        return String.format(info, brand, model, year, fuelLevel, battery, distance);
     }
 
 }

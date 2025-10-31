@@ -5,16 +5,15 @@ import java.util.Collections;
 import java.util.List;
 
 public  abstract class Player {
-    private  String name;
+    private String name;
     private List<Boolean> history;
-    private Boolean choice;
+    private boolean choice;
     private int score;
 
-    public Player(String name, Boolean choice) {
+    public Player(String name, boolean choice) {
         this.name = name;
         this.choice = choice;
-        this.history = new ArrayList<>(Collections.singletonList(choice));
-        this.score = 0;
+        this.history = new ArrayList<>(List.of(choice));
     }
 
     public abstract boolean strategy(List<Boolean> enemyHistory);
@@ -23,25 +22,16 @@ public  abstract class Player {
         return choice;
     }
 
-    public void setChoice(Boolean choice) {
+
+    public void setChoice(boolean choice) {
         this.choice = choice;
-        addChoiceToHistory(choice);
+        this.history.add(choice);
     }
 
-    public void addChoiceToHistory(Boolean choice){
-        history.add(choice);
-    }
+
 
     public List<Boolean> getHistory() {
         return history;
-    }
-
-    public void setHistory(List<Boolean> history) {
-        this.history = history;
-    }
-
-    public int getScore() {
-        return score;
     }
 
     public void setScore(int score) {

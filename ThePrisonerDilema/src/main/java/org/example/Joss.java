@@ -10,8 +10,7 @@ public class Joss extends Player{
 
     @Override
     public boolean strategy(List<Boolean> enemyHistory) {
-        int cheat = enemyHistory.size() *  10 / 100;
-        if (cheat >= enemyHistory.size() / 10) return false;
+        if (Math.random() < 0.1) return false; // 10% ehtimalla xəyanət et
         return enemyHistory.get(enemyHistory.size() - 1);
     }
 }

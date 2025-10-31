@@ -1,8 +1,13 @@
 package org.example;
+import java.util.List;
 
-public class AlwaysCooperate implements Strategy{
+public class AlwaysCooperate extends Player {
+    public AlwaysCooperate(String name, Boolean choice) {
+        super(name, choice);
+    }
+
     @Override
-    public boolean cooperate(boolean[] opponentHistory) {
+    public boolean strategy(List<Boolean> enemyHistory) {
         return true;
     }
 }

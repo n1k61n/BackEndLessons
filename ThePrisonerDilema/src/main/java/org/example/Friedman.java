@@ -10,9 +10,15 @@ public class Friedman extends Player{
 
     @Override
     public boolean strategy(List<Boolean> enemyHistory) {
-        if (enemyHistory.get(enemyHistory.size() - 1) == false){
-            this.setChoice(false);
+        // Əgər heç bir tarix yoxdur (ilk gediş) → əməkdaşlıq et
+        if (enemyHistory.isEmpty()) return true;
+
+        // Əgər rəqib tarixində haradasa xəyanət varsa → daimi xəyanət
+        if (enemyHistory.contains(false)) {
+            return false;
         }
-        return getChoice();
+
+        // Əks halda əməkdaşlığı davam et
+        return true;
     }
 }

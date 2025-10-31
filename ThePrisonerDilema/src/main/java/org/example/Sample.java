@@ -12,12 +12,9 @@ public class Sample extends Player{
     @Override
     public boolean strategy(List<Boolean> enemyHistory) {
         int n =  enemyHistory.size();
-        boolean choice = getChoice();
-        if(n >= 2 && enemyHistory.get(n - 1) == false && enemyHistory.get(n - 2) == false) {
-            choice = false;
+        if(n >= 2 && !enemyHistory.get(n - 1) && !enemyHistory.get(n - 2)){
+            return false;
         }
-        return choice;
+        return true;
     }
-
-
 }
