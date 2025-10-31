@@ -25,7 +25,7 @@ public class Main {
     static void main() {
         Scanner scanner = new Scanner(System.in);
         Library kitabXanaci = new Library();
-        int choice = 5;
+        int choice;
 
         do {
             System.out.println("1. Add Book");

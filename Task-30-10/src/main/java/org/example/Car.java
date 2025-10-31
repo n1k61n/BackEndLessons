@@ -1,10 +1,28 @@
 package org.example;
 
-
-public class Car {
+/**
+ * Car (abstrakt)
+ * Sahələr:
+ * String brand, String model, int year
+ * double odometerKm (ümumi yürüş)
+ * boolean isRunning
+ * boolean autopilotOn
+ * SensorSuite sensors (sürücüsüz hərəkət üçün)
+ * Metodlar (bəziləri abstrakt):
+ * start(), stop() (Drivable-dan gəlir)
+ * drive(double km) → alt siniflərdə sərfə görə override
+ * enableAutopilot()/disableAutopilot() (AutopilotCapable)
+ * protected abstract boolean hasEnoughEnergyFor(double km);
+ * protected abstract void consumeFor(double km);
+ */
+public abstract class Car implements Drivable, AutopilotCapable{
     private String brand;
     private String model;
     private int year;
+    private double odometerKm;
+    private boolean isRunning;
+    private boolean autopiloOn;
+//    private SensorSuite sensors;
     private double fuelLevel;
     private double  distance;
     private double battery;
@@ -17,12 +35,23 @@ public class Car {
         this.battery = battery;
     }
 
+    protected abstract boolean hasEnoughEnergyFor(double km);
 
     public String getBrand() {
         return brand;
     }
 
-    public void drive(double distance){
+    @Override
+    public void start() {
+        isRunning = true;
+    }
+
+    @Override
+    public void stop() {
+        isRunning = false;
+    }
+
+    public double drive(double distance){
         double fromFuel = calculateDistanceFromFuel();
         double fromBattery = calculateDistanceFromBattery();
         double moveDistance = fromBattery + fromFuel;
@@ -31,14 +60,15 @@ public class Car {
             if(fromFuel >= distance){
                 this.fuelLevel -= distance / 10.0;
             }else{
-                double leftDistance = distance  - (this.fuelLevel * 10);
+                double leftDistance = distance  - calculateDistanceFromFuel();
                 this.fuelLevel -= this.fuelLevel;
-                this.battery -= leftDistance / 3.0;
+                this.battery -= leftDistance / 2.0;
             }
         }
         else {
             System.out.println("Not enough fuel!");
         }
+        return fromFuel;
     }
 
     private double calculateDistanceFromFuel(){
@@ -63,4 +93,14 @@ public class Car {
         return String.format(info, brand, model, year, fuelLevel, battery, distance);
     }
 
+
+    @Override
+    public void enableAutopilot() {
+        autopiloOn = true;
+    }
+
+    @Override
+    public void disableAutopilot() {
+        autopiloOn = false;
+    }
 }

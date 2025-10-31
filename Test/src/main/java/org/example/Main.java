@@ -53,10 +53,14 @@ public class Main {
 //        BiConsumer<Integer, Integer> res = (a, b) -> System.out.println(a + b);
 //        res.accept(5,7);
 
-        List cars = new ArrayList();
-        List<String> cars1 = new ArrayList<>();
-
-        ArrayList lst = new ArrayList();
+//        List cars = new ArrayList();
+//        List<String> cars1 = new ArrayList<>();
+//
+//        ArrayList lst = new ArrayList();
+        int a = 5;
+        int b = 10;
+        System.out.printf("%s ededi %s defiye tapildi\n", a,b);
+        System.out.println(a + " ededi" + b +" defiye tapildi");
 
 
 
