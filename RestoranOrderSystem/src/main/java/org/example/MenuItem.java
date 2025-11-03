@@ -3,28 +3,23 @@ package org.example;
 
 //abstract class MenuItem: name, basePrice, abstract calculatePrice()
 public abstract class MenuItem {
-    private String name;
-    private double basePrice;
-    private ItemType itemType;
+    protected String name;
+    protected double basePrice;
+    protected ItemType type;
 
 
 
-    public MenuItem(String name, double basePrice, ItemType itemType) {
+    public MenuItem(String name, double basePrice, ItemType type) {
         this.name = name;
         this.basePrice = basePrice;
-        this.itemType = itemType;
+        this.type = type;
     }
 
-    public double getBasePrice() {
-        return basePrice;
-    }
 
     public abstract  double calculatePrice();
 
     @Override
     public String toString() {
-        return "MenuItem: "  +
-                " " + name + '\'' +
-                " " + basePrice;
+        return name + " (" + type + ") - " + String.format("%.2f AZN", calculatePrice());
     }
 }

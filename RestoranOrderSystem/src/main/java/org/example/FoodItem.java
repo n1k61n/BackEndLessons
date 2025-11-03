@@ -6,17 +6,24 @@ import java.util.List;
 public class FoodItem extends MenuItem {
     private boolean isVegetarian;
 
-    public FoodItem(String name, double basePrice, ItemType itemType) {
-        super(name, basePrice, itemType);
+    public FoodItem(String name, double basePrice, boolean isVegetarian) {
+        super(name, basePrice, ItemType.FOOD);
+        this.isVegetarian = isVegetarian;
     }
-
 
     public void setVegetarian(boolean vegetarian) {
         isVegetarian = vegetarian;
     }
 
+
     @Override
     public double calculatePrice() {
-        return 0;
+        return isVegetarian ? basePrice * 0.95 : basePrice;
+    }
+
+    @Override
+    public String toString() {
+        String vegan = isVegetarian ? "Vegetarian" : "Non-Vegetarian";
+        return super.toString() + " [" + vegan + "]";
     }
 }

@@ -4,17 +4,45 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int N = 1000;
+        int N = 10;
         int[] arr = new int[N];
         for(int i = 0; i< N; i++){
             arr[i] = (int)(Math.random() * 100);
         }
 
+        mergeSort(arr, 0, N-1);
+        System.out.println(Arrays.toString(arr));
 //        arr = Arrays.stream(arr).sorted().toArray();
 //        bubbleSort(arr);
 //        for(int i: arr) System.out.print(i + " ");
-        speedTest(arr);
+//        speedTest(arr);
     }
+
+    static void mergeSort(int[] arr, int left, int right){
+        if(left < right){
+            int mid = (left + right) / 2;
+            mergeSort(arr, left, mid);
+            mergeSort(arr, mid + 1, right);
+
+            merge(arr, left, mid, right);
+        }
+
+    }
+
+    private static void merge(int[] nums, int left, int mid, int right) {
+        int[] temp = new int[right - left + 1];
+        int i = left, j = mid + 1, k = 0;
+
+        while (i <= mid && j <= right)
+            temp[k++] = nums[i] <= nums[j] ? nums[i++] : nums[j++];
+
+        while (i <= mid) temp[k++] = nums[i++];
+        while (j <= right) temp[k++] = nums[j++];
+
+        for (int t = 0; t < temp.length; t++)
+            nums[left + t] = temp[t];
+    }
+
 
 
     static void speedTest(int[] arr){
@@ -36,27 +64,7 @@ public class Main {
     }
 
 
-    static void mergeSort(int[] arr, int start, int end){
-        int mid = arr.length / 2;
 
-
-    }
-
-    static int[] merge(int[] a, int[] b){
-        int size = a.length + b.length;
-        int[] newArr = new int[size];
-        int i = 0, j = 0;
-        int pos = 0;
-        while ( i < a.length && j < b.length){
-            if(a[i] < b[j]) newArr[pos++] = a[i++];
-            else  newArr[pos++] = b[j++];
-        }
-
-        while(i < a.length) newArr[pos++] = a[i++];
-        while(j < b.length) newArr[pos++] = b[j++];
-
-        return newArr;
-    }
 
 
 

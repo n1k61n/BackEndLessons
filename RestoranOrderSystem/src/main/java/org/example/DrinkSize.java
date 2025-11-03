@@ -10,4 +10,14 @@ public enum DrinkSize {
     DrinkSize(int size) {
         this.size = size;
     }
+
+    public int getDrinkSize(DrinkSize i){
+        int res = -1;
+        switch (i){
+            case SMALL -> res = 0;
+            case MEDIUM -> res = 1;
+            case LARGE ->  res = 2;
+        }
+        return res;
+    }
 }

@@ -1,37 +1,25 @@
 package org.example;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import java.io.IOException;
 
-import java.util.Random;
 
-public class Main {
-    static void main(){
-        boolean titFortat = true;
-        boolean opponent = false;
-        int tftScore = 0;
-        int oppScore = 0;
+class Main {
 
-        Random random = new Random();
-        for(int i = 0; i < 200; i++){
-            if (titFortat && opponent){
-                tftScore += 3;
-                oppScore += 3;
-            }
-            else if (!titFortat && !opponent){
-                tftScore += 1;
-                oppScore += 1;
-            }
-            else if (!titFortat && opponent){
-                tftScore += 5;
-                oppScore += 0;
-            } else if (titFortat && !opponent){
-                tftScore += 0;
-                oppScore += 5;
-            }
-            titFortat = opponent;
-            opponent = random.nextInt(2) == 1;
+    static void main() throws IOException {
+        Document doc = Jsoup.connect("https://en.wikipedia.org/").get();
+        log(doc.title());
+        Elements newsHeadlines = doc.select("#mp-itn b a");
+        for (Element headline : newsHeadlines) {
+            log("%s\t%s", headline.attr("title"), headline.absUrl("href"));
         }
-
-        System.out.println("Tit For Tat: " + tftScore);
-        System.out.println("Opponent: " + oppScore);
     }
+
+    static void log(String msg, String... vals) {
+        System.out.println(String.format(msg, (Object[]) vals));
+    }
+
 }

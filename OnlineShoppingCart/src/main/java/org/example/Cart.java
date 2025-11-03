@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -22,12 +23,13 @@ public class Cart {
 //    removeProduct()
     public void removeProduct(Scanner scanner){
         System.out.print("Silinnen mehsulun adini daxil edin: ");
-        String removeProduct = scanner.nextLine();
-        for(Product p : cart){
-            if(p.name.equals(removeProduct)){
-                cart.remove(p);
+        String removeProduct = scanner.next();
+        Iterator<Product> it = cart.iterator();
+        while(it.hasNext()){
+            Product p = it.next();
+            if(p.name.equalsIgnoreCase(removeProduct)){
+                it.remove();
                 System.out.println("Mehsul sebetden silindi.");
-                break;
             }
         }
     }

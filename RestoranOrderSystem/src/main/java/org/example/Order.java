@@ -4,8 +4,11 @@ import java.util.ArrayList;
 
 //Order: ArrayList<MenuItem> saxlayır, addItem(), calculateTotal(), showOrder().
 public class Order {
-    ArrayList<MenuItem> menuItems = new ArrayList<>();
+    ArrayList<MenuItem> menuItems;
 
+    public Order() {
+        this.menuItems = new ArrayList<>();
+    }
 
     public void addItem(MenuItem item){
         menuItems.add(item);
@@ -14,7 +17,7 @@ public class Order {
     public double calculateTotal(){
         double total = 0;
         for(MenuItem item: menuItems){
-            total += item.getBasePrice();
+            total += item.calculatePrice();
         }
         return total;
     }
