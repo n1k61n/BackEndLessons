@@ -20,7 +20,7 @@ public class Store {
         String product = scanner.next().toLowerCase();
         switch (product){
             case "elektronika" -> {
-                System.out.print("Mehsulun adi: ");
+                System.out.print("Elektronika adi: ");
                 String name = scanner.next().toLowerCase();
                 System.out.print("Qiymetini: ");
                 double price = Double.parseDouble(scanner.next());
