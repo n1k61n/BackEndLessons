@@ -43,11 +43,12 @@ public class Main {
                     String nameDrink = scanner.next();
                     System.out.print("Qiymeti: ");
                     double priceDrink = Double.parseDouble(scanner.next());
-                    System.out.print("Olcusu small/medium/large");
+                    System.out.print("Olcusu small/medium/large: ");
                     String size = scanner.next();
                     order.addItem(nameDrink, priceDrink, size);
                     break;
                 case "3":
+                    System.out.println("-".repeat(20));
                     System.out.println("Sifarisleriniz: ");
                     order.showOrder();
                     System.out.println("-".repeat(20));

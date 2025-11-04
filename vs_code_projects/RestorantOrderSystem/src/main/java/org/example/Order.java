@@ -23,9 +23,8 @@ public class Order {
     }
     
     public void showOrder(){
-        System.out.println("-".repeat(20));
         orders.forEach(order -> System.out.println(order));
-        System.out.println("-".repeat(20));
+
     }
         
 }
