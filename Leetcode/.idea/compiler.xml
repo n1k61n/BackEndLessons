@@ -6,11 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-<<<<<<< HEAD
-=======
-        <module name="RestorantOrderSystem" />
-        <module name="RestoranOrderSystem" />
->>>>>>> 6643060423c1246905693afd1dadf7f49ff28c3e
+        <module name="Leetcode" />
       </profile>
     </annotationProcessing>
   </component>
