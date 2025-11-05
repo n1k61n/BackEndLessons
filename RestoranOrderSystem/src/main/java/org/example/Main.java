@@ -54,7 +54,7 @@ public class Main {
         double priceFood = Double.parseDouble(scanner.next());
         System.out.print("Vegeterian yemeyidi yes/no: ");
         String yesNo = scanner.next();
-        order.addItem(nameFood, priceFood, yesNo.equalsIgnoreCase("yes") ? true : false);
+        order.addItem(nameFood, priceFood,  yesNo.equalsIgnoreCase("yes"));
 
     }
 }

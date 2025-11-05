@@ -1,4 +1,4 @@
-package org.example;
+package org.example.items;
 
 public abstract class MenuItem{
     private final String name;

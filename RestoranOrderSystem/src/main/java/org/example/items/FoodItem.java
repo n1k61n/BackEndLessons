@@ -1,6 +1,6 @@
-package org.example;
+package org.example.items;
 
-public class FoodItem extends MenuItem{
+public class FoodItem extends MenuItem {
     private final boolean isVegetarian;
 
 

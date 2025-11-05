@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.items.Drinkitem;
+import org.example.items.FoodItem;
+import org.example.items.MenuItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +21,7 @@ public class Order {
     public double calculateTotal(){
         double total = 0;
         for (MenuItem order : orders){
-            total += order.basePrice;
+            total += order.calculatePrice();
         }
         return  total;
     }

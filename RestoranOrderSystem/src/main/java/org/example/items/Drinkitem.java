@@ -1,6 +1,6 @@
-package org.example;
+package org.example.items;
 
-public class Drinkitem extends MenuItem{
+public class Drinkitem extends MenuItem {
     private String size;
 
     public Drinkitem(String name, double basePrice, String size) {

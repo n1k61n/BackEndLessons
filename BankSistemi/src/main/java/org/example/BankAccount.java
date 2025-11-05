@@ -16,7 +16,7 @@ public abstract class BankAccount {
 
     public void withdraw(double amount){
         if (amount > balance) {
-            throw new IllegalArgumentException("Balansda kifayet qeder vesait yoxdur.");
+            throw new NegativeBalaceException("Balansda kifayet qeder vesait yoxdur.");
         }
         balance -= amount;
     }
