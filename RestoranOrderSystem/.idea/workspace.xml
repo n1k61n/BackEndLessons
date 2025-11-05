@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95638d58-af7d-4ea7-a603-1cf5575eae3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../BankSistemi/src/main/java/org/example/NegativeBalaceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/org/example/TestCustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BankSistemi/src/main/java/org/example/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BankSistemi/src/main/java/org/example/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Drinkitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Drinkitem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/FoodItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ItemType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ItemType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/org/example/ParkingSystem.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -24,13 +24,8 @@ public class Main {
         course.addStudent(new Student("Orxan", 15, Department.IT));
         course.addStudent(new Student("Kenan", 15, Department.IT));
         course.addStudent(new Student("Mikail", 15, Department.IT));
-
         course.showCourseInfo();
-
     }
-
-
-
 }
 
 

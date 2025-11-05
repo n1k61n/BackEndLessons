@@ -5,3 +5,4 @@ public class NegativeBalaceException extends RuntimeException {
         super(message);
     }
 }
+

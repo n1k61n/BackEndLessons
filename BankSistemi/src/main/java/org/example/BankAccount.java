@@ -11,7 +11,10 @@ public abstract class BankAccount {
     public void deposit(double balance) {
         if (balance > 0) {
             this.balance += balance;
+            System.out.println("Balans ugurla artirildi.");
         }
+        else
+            System.out.println("Balans sifir ve ya menfi ola bilmez.");
     }
 
     public void withdraw(double amount){
