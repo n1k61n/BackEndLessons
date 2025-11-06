@@ -38,10 +38,9 @@ public class Main {
     }
 
     public static boolean validatePin(String pin) {
-        // Your code here...
-        Pattern pattern =  Pattern.compile(pin);
-        Matcher matcher =
-        return pattern.matcher(pin);
+        Pattern pattern = Pattern.compile(pin);
+        Matcher matcher = pattern.matcher(pin);
+        return matcher.find();
     }
 
 }

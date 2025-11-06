@@ -1,6 +1,28 @@
 package org.example;
 
 public class Regex {
+/*
+Given a string, determine if it's a valid identifier.
+
+Here is the syntax for valid identifiers:
+Each identifier must have at least one character.
+The first character must be picked from: alpha, underscore, or dollar sign. The first character cannot be a digit.
+The rest of the characters (besides the first) can be from: alpha, digit, underscore, or dollar sign. In other words, it can be any valid identifier character.
+Examples of valid identifiers:
+i
+wo_rd
+b2h
+Examples of invalid identifiers:
+1i
+wo rd
+!b2h
+ */
+
+    public static boolean isValid(String idn) {
+        return idn.matches("^[A-Za-z0-9_\\$]");
+    }
+
+
     public static boolean validateEuro(String serialNumber) {
         int sum = 0;
         sum += serialNumber.charAt(0) - 'A';
@@ -24,16 +46,19 @@ public class Regex {
         return str.replaceAll("\\.", "-");
     }
 
-
     public static boolean validateUsr(String s) {
         return s.matches("[0-9a-z_]{4,16}");
     }
 
     public static boolean isLockNessMonster(String s){
-        //FIND THE LOCH NESS MONSTER. SAVE YOUR TREE FIDDY
         return s.matches("tree fiddy|3.50|three fifty");
     }
+
     public final static boolean isDigit(String s) {
         return s.matches("[0-9]");
+    }
+
+    public static String removeUrlAnchor(String url) {
+        return "";
     }
 }

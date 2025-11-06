@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,10 +26,12 @@ public class Main {
 //        String numbers = "1";
 //        System.out.println(Regex.isDigit(numbers));
 
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
+// List<Integer> numbers = new ArrayList<>();
+//        numbers.add(1);
+        String[] color = {"white", "yellow", "purple", "red"};
+        Random rnd = new Random();
+        System.out.println(rnd.nextInt(color.length));
     }
 }
-
 
 
