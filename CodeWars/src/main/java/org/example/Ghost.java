@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class Ghost {
     // your code goes here
-    private String[] color = {"white", "yellow", "purple", "red"};
+    String[] colors = {"white" , "yellow" , "purple" , "red"};
+    String color;
 
-
+    public Ghost(){
+        this.color = colors[(int)(Math.random() * colors.length)];
+    }
 
     public String getColor(){
-//        Random rnd = new Random();
-//        color[];
-//        return color[rnd.nextInt(color.length)];
-        return "";
+        return this.color;
     }
 }

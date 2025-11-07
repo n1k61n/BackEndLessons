@@ -51,7 +51,7 @@ wo rd
     }
 
     public static boolean isLockNessMonster(String s){
-        return s.matches("tree fiddy|3.50|three fifty");
+        return s.matches(".*(tree fiddy|3.50|three fifty).*");
     }
 
     public final static boolean isDigit(String s) {

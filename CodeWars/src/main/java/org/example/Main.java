@@ -1,11 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Main {
     public static void main(String[] args) {
 //        String input = "Kod: 12345, tarix: 2025";
@@ -28,9 +22,17 @@ public class Main {
 
 // List<Integer> numbers = new ArrayList<>();
 //        numbers.add(1);
-        String[] color = {"white", "yellow", "purple", "red"};
-        Random rnd = new Random();
-        System.out.println(rnd.nextInt(color.length));
+//        String digits = "312";
+//        System.out.println(explode(digits));
+
+    }
+
+    public static String explode(String digits) {
+        StringBuilder repeated = new StringBuilder();
+        for(Character c : digits.toCharArray()){
+            repeated.append(String.valueOf(c).repeat(Character.getNumericValue(c)));
+        }
+        return repeated.toString();
     }
 }
 
