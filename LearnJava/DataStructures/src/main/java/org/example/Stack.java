@@ -6,7 +6,12 @@ import java.util.Scanner;
 
 public class Stack {
     private static int topIndex ;
-    private List<Integer> stack = new ArrayList<>();
+    private final List<Integer> stack ;
+
+    public Stack(){
+        topIndex = 0;
+        stack = new ArrayList<>();
+    }
 
     public void push(Scanner scanner){
         System.out.print("Enter the number: ");
@@ -17,7 +22,7 @@ public class Stack {
     }
 
     public void pop(){
-        if(!isEmpty()) {
+        if(isEmpty()) {
             stack.remove(--topIndex);
             System.out.println("remove from stack");
         }
@@ -26,27 +31,30 @@ public class Stack {
 
     }
 
-    public void top(){
-        if (!isEmpty())
+    public void peek(){
+        if (isEmpty())
             System.out.println(stack.get(topIndex-1));
         else
             System.out.println("stack is empty!");
     }
 
     public void showStack(){
-        if(!isEmpty()) {
-            for (int i = stack.size() - 1; i >= 0; i--) {
-                System.out.println(stack.get(i));
+        if(isEmpty()) {
+            for (int i = 0; i < size(); i++) {
+                System.out.print(stack.get(i) + " ");
             }
+            System.out.println();
         }
         else
             System.out.println("stack is empty!");
     }
-    public boolean isEmpty(){
-        return topIndex == -1;
+
+    public int size(){
+        return topIndex;
     }
 
-    public boolean isFull(){
-        return topIndex == stack.size() - 1;
+    public boolean isEmpty(){
+        return size() != 0;
     }
+
 }
