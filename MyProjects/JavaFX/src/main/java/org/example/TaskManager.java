@@ -1,17 +1,14 @@
 package org.example;
 
-
 import java.io.*;
 import java.util.*;
 import java.util.logging.*;
-
 
 public class TaskManager {
     private HashMap<Integer, Task> tasks = new HashMap<>();
     private int nextId = 1;
     private final String FILE_NAME = "tasks.dat";
     private static final Logger logger = Logger.getLogger(TaskManager.class.getName());
-
 
     public TaskManager() {
         loadFromFile();
@@ -50,7 +47,6 @@ public class TaskManager {
         }
     }
 
-
     @SuppressWarnings("unchecked")
     private void loadFromFile() {
         File file = new File(FILE_NAME);
@@ -58,23 +54,13 @@ public class TaskManager {
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
             Object obj = ois.readObject();
-            if (obj instanceof HashMap<?, ?> temp) {
-
-                // Tip təhlükəsizliyini yoxlayaq
-                boolean valid = temp.keySet().stream().allMatch(k -> k instanceof Integer) &&
-                        temp.values().stream().allMatch(v -> v instanceof Task);
-
-                if (valid) {
-                    tasks = (HashMap<Integer, Task>) temp;
-                    if (!tasks.isEmpty())
-                        nextId = Collections.max(tasks.keySet()) + 1;
-                } else {
-                    System.err.println("⚠️ Fayldakı məlumatın tipi gözlənilən formatda deyil!");
-                }
+            if (obj instanceof HashMap) {
+                tasks = (HashMap<Integer, Task>) obj;
+                if (!tasks.isEmpty())
+                    nextId = Collections.max(tasks.keySet()) + 1;
             }
         } catch (IOException | ClassNotFoundException e) {
             logger.log(Level.WARNING, "Fayl oxunarkən xəta: " + e.getMessage(), e);
         }
     }
-
 }
