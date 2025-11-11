@@ -1,13 +1,11 @@
 package org.example;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class TaskManager {
-    private static int id = 0;
     private Map<Integer, Task> tasks = new HashMap<>();
+    private int nextId = 1;
     private final String FILE_NAME = "task.dat";
 
     public void addTask(Scanner scanner) {
@@ -24,8 +22,8 @@ public class TaskManager {
             description.append(line).append("\n");
         }
 
-        Task task = new Task(id, name, description.toString());
-        tasks.put(id++, task);
+        Task task = new Task(nextId++, name, description.toString());
+        tasks.put(task.getId(), task);
         System.out.println("Tapşırıq uğurla əlavə olundu.");
     }
 
@@ -57,26 +55,16 @@ public class TaskManager {
     public void completedTask(Scanner scanner) {
         System.out.print("Tamamlamak istediyiniz tapşırığın Id-ni qeyd edin: ");
         int id = Integer.parseInt(scanner.nextLine());
-        tasks.forEach((k, v) -> {
-            if (v.getId() == id) {
-                v.setCompleted(true);
-            }
-        });
+        Task task = tasks.get(id);
+        if(task != null){
+            task.setCompleted(true);
+            System.out.println("Tapsiriq tamaalandi.");
+        }
     }
 
     public void sortByPriority() {
-//        Map<Integer, String> sortedByValue = tasks.entrySet()
-//                .stream()
-//                .sorted(Map.Entry.comparingByKey())
-//                        .collect(
-//                                java.util.stream.Collectors.toMap(
-//                                        Map.Entry::getKey,
-//                                        Map.Entry::getValue,
-//                                        (e1, e2) -> e1,
-//                                        LinkedHashMap::new
-//                                )
-//                        );
-//
+        List<Task> list = new ArrayList<>(tasks.values());
+//        list.sort(Comparator.comparing(task -> task.isCompleted()));
         System.out.println(" Tapşırıqlar prioritetə görə sıralandı.");
     }
 
