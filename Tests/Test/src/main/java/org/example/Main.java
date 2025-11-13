@@ -9,10 +9,37 @@ public class Main {
 //        System.out.println(abs(0));
 //        System.out.println(abs(5));
 
-        int[] arr1 = {1,2,3};
-        int[] arr2 = {4,5,6,7};
+//        int[] arr1 = {1,2,3};
+//        int[] arr2 = {4,5,6,7};
 //        System.out.println("Cemi: " + sumArray(arr1, arr2));
-        System.out.println(sumArray2(arr1) + sumArray2(arr2));
+//        System.out.println(sumArray2(arr1) + sumArray2(arr2));
+
+        int a = 0;
+        System.out.println("a = " + a);
+        increseA(a);
+        System.out.println("a = " + a);
+
+        int[] b = {0};
+        System.out.println("b[0] = " + b[0]);
+        increseB(b);
+        System.out.println("b[0] = " + b[0]);
+
+
+        ClassA c = new ClassA(0);
+        System.out.println("c = " + c.getA());
+        c.increaseA();
+        System.out.println("c = " + c.getA());
+
+
+    }
+
+    static void increseB(int[] x){
+        x[0]++;
+    }
+
+
+    static void increseA(int a){
+        a++;
     }
 
     static int sumArray2(int [] arr){
