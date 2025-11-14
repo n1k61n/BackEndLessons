@@ -1,0 +1,26 @@
+package org.example;
+
+
+import java.util.Locale;
+
+/*
+You are the owner of a box making company.
+Your company can produce any equal sided polygon box, but plenty of your customers want to transport circular objects in these boxes.
+Circles are a very common shape in the consumer industry. Tin cans, glasses, tyres and CDs are a few examples of these.
+As a result you decide to add this information on your boxes: The largest (diameter) circular object that can fit into a given box.
+ */
+public class Polygon {
+    int sides;
+    int sideLength;
+
+    public Polygon(int sides, int sideLength) {
+        this.sides = sides;
+        this.sideLength = sideLength;
+        Locale.setDefault(Locale.US);
+    }
+
+    public double circleDiameter(){
+        return sideLength / Math.tan(Math.PI / sides);
+    }
+
+}
