@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c321d407-16d1-4a66-9dff-ed62b56925ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Gui/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/src/main/java/org/example/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gui/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaFundamentals/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaFundamentals/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Leetcode/src/main/java/org/example/Solution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/DrinkItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/DrinkItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/DrinkSize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/FoodItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/FoodItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/ItemType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/ItemType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/MenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/MenuItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RestoranOrderSystem/target/classes/org/example/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserBot/src/main/java/org/example/GeminiAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserBot/src/main/java/org/example/GeminiAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ev-tapsiriglari-25-10/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../viktorina/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../viktorina/questions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../viktorina/results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/src/main/java/org/example/BankAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/src/main/java/org/example/BankSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/src/main/java/org/example/CreditAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/BankSistemi/src/main/java/org/example/SavingAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/src/main/java/org/example/Drinkitem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/src/main/java/org/example/FoodItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/src/main/java/org/example/Itemtype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/src/main/java/org/example/MenuItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/RestorantOrderSystem/src/main/java/org/example/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/TestingSomeStuff/src/main/java/org/example/MyThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/untitled/src/main/java/org/example/ParkingSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vs_code_projects/vs_code_projects.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;n1k61n&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/n1k61n/BackEndLessons.git&quot;,
+    &quot;accountId&quot;: &quot;048ed88a-459e-4fb8-8bec-6b43c9b3cba9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="34ybkmwfHpy6SpyLE1JclWZjnhT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mamed/GithubProjects/UniversitetManagementSystem",
+    "onboarding.tips.debug.path": "C:/Users/mamed/GithubProjects/vs_code_projects/UniversitetManagementSystem/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="UniversitetManagementSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c321d407-16d1-4a66-9dff-ed62b56925ef" name="Changes" comment="" />
+      <created>1762188906616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762188906616</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$USER_HOME$" />
+    </ignored-roots>
+  </component>
+</project>
