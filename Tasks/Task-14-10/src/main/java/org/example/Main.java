@@ -14,7 +14,7 @@ public class Main {
 //            System.out.println(b);
 //        }
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 //        int a = scanner.nextInt();
 //        int b = scanner.nextInt();
 //        int c = scanner.nextInt();
@@ -51,13 +51,45 @@ public class Main {
 //        }
 //        System.out.println(a);
 
-//
-//    static int  fib(int n){
-//        return fib(n - 1);
-//        if(n == 0) return 0;
-//
-//    }
 
+//        int a = 64;
+//        int b = 48;
+//        while(b != 0){
+//            int temp = a % b;
+//            a = b;
+//            b = temp;
+//        }
+//        System.out.println(a);
+//        System.out.println(gcd(a, b));
+
+        int a = 0;
+        int b = 1;
+        int i = 0 ;
+        while(i < 10){
+            System.out.print(a+" ");
+            int temp = a + b;
+            a  = b;
+            b = temp;
+            i++;
+        }
+        System.out.println();
+        fib(0, 1, 10);
+
+
+
+
+    }
+
+    static void fib(int a, int b, int n){
+        if (n > 0) {
+            System.out.print(a + " ");
+            fib(b, a + b, n - 1);
+        }
+    }
+
+    static int gcd(int a, int b){
+        if (b == 0) return a;
+        return gcd(b, a % b);
     }
 
 
