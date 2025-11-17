@@ -81,10 +81,10 @@ public class Main {
     }
 
     static void fib(int a, int b, int n){
-        if (n > 0) {
-            System.out.print(a + " ");
-            fib(b, a + b, n - 1);
-        }
+        if (n == 0) return;
+        System.out.print(a + " ");
+        fib(b, a + b, n - 1);
+
     }
 
     static int gcd(int a, int b){
