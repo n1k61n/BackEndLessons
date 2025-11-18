@@ -42,7 +42,7 @@ public class Employee {
         else System.out.println("Maas 300 asagi olmasin");
     }
     public void increaseSalary(double percent){
-         salary += salary * percent / 100;
+        salary += salary * percent / 100;
     }
 
     public void getInfo(){
