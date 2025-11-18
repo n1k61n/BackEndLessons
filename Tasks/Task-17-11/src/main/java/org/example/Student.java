@@ -18,10 +18,19 @@ public class Student {
     private int age;
     @Getter
     private int grade;
+    private boolean passed;
 
     public Student(String name, int age){
         this.name = name;
         this.age = age;
+    }
+
+    public boolean isPassed() {
+        return grade >= 50;
+    }
+
+    public void setPassed(boolean passed) {
+        this.passed = passed;
     }
 
     public void setGrade(int grade){

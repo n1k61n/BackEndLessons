@@ -11,8 +11,7 @@ enum Hand {
             ROCK,  Set.of(SCISSOR),
             SCISSOR,  Set.of(PAPER),
             PAPER,  Set.of(ROCK, WELL),
-            WELL,  Set.of(ROCK, SCISSOR),
-            RAT, Set.of()
+            WELL,  Set.of(ROCK, SCISSOR)
     );
 
     private static final Random random = new Random();
@@ -131,7 +130,8 @@ class Game{
     public static void main(String[] args) {
         Player left = new ComputerPlayer("Emin");
         Player right = new ComputerPlayer("Tuner");
-        play(3, left, right);
+        int round = 3;
+        play(round, left, right);
 
     }
 }

@@ -15,8 +15,8 @@ import lombok.Getter;
 public class Book {
     @Getter
     private String title;
-    private String author;
-    private int year;
+    private final String author;
+    private final int year;
 
     public Book(String title, String author, int year) {
         this.title = title;

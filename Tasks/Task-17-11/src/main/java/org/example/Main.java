@@ -17,7 +17,7 @@ public class Main {
 //       emin.setGrade(45);
 //       System.out.println(emin.getInfo());
 //       System.out.println("Telebe kecib " + (emin.isPassed(emin.getGrade()) ? "Yes" : "No"));
-
+//
 
 
 //        Library lib = new Library();
@@ -36,7 +36,11 @@ public class Main {
 //            System.out.println("bele kitab yoxdur");
 
 
-
+        Car car = new Car("Mercedes", "x5", 300);
+        car.setSpeed(100);
+        car.accelerate(50);
+        car.brake(30);
+        car.getInfo();
 
 
     }
