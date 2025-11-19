@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Set;
 
 enum Hand {
-    ROCK, PAPER, WELL, SCISSOR, RAT;
+    ROCK, PAPER, WELL, SCISSOR;
 
     private static final Map<Hand, Set<Hand>> beatsMap = Map.of(
             ROCK,  Set.of(SCISSOR),

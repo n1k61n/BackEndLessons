@@ -16,5 +16,6 @@ public class ArticleLanguage {
     private String langCode;
 
     @ManyToOne
+    @JoinColumn(name = "article_id")
     private Article article;
 }
