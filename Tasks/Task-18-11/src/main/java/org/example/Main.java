@@ -6,25 +6,38 @@ import java.util.List;
 
 
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-//        List<Shape> shapes = new ArrayList<>();
-//        shapes.add(new Circle(4));
-//        shapes.add(new Triangle(19));
-//
-//        for(Shape shape   : shapes){
-//            System.out.println(shape.calculateArea());
-//            System.out.println(shape.calculatePerimetr());
-//        }
-//        game();
 
-        int [] numbers = {4,3,6,2,8,1,9,0};
-        //bubbleSort(numbers);
-        mergeSort(numbers, 0, numbers.length - 1);
-        System.out.println(Arrays.toString(numbers));
+//        Integer[] numbers = {4,3,6,2,8,1,9,0};
+//        String[] words = {"Hi", "Hello", "WOrld","cake"};
+//
+//        printArray(numbers);
+//        printArray(words);
     }
+
+//    private static void printArray(Integer[] numbers) {
+//        for(Integer i : numbers){
+//            System.out.println(i);
+//        }
+//    }
+//
+//    private static void printArray(String[] words) {
+//        for(String s: words){
+//            System.out.println(s);
+//        }
+//    }
+
+//    static <T> void printArray(T[] array){
+//        for(T t : array){
+//            System.out.print(t + " ");
+//        }
+//        System.out.println();
+//    }
+
+
+
 
     private static void mergeSort(int[] arr, int left, int right) {
         if(left >= right) return;

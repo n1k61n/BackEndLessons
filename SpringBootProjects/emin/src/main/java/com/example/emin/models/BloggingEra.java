@@ -1,6 +1,7 @@
 package com.example.emin.models;
 
 import com.example.emin.models.languages.ArticleLanguage;
+import com.example.emin.models.languages.BloggingEraLanguage;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -14,6 +15,8 @@ public class BloggingEra {
     private String photoUrl;
 
     @OneToMany(mappedBy = "bloggingEra")
-    private List<ArticleLanguage> articleLanguages = new ArrayList<>();
+    private List<BloggingEraLanguage> bloggingEraLanguages = new ArrayList<>();
+
+
 
 }

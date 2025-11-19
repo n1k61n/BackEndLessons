@@ -14,7 +14,11 @@ public class Article {
     private Long id;
     private String photoUrl;
 
-    @OneToMany(mappedBy = "article")
-    private List<ArticleLanguage> articleLanguages = new ArrayList<>();
+//    @OneToMany(mappedBy = "article")
+//    private List<ArticleLanguage> articleLanguages = new ArrayList<>();
+
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+    private List<ArticleLanguage> languages = new ArrayList<>();
+
 
 }
