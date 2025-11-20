@@ -22,18 +22,23 @@ public class Main {
 //        Smartphone samsung = new Smartphone("Samsung", 1599);
 //        samsung.setBasePrice(samsung.calculatePrice());
 //        System.out.println(samsung);
-
+//
 //        SMSNotification sms = (SMSNotification) NotificationFactory.getNotification("SMS");
-//        EmailNotification emailNotification = (EmailNotification) NotificationFactory.getNotification(("EMAIL"));
+//        EmailNotification email = (EmailNotification) NotificationFactory.getNotification(("EMAIL"));
+//        System.out.println(sms.send());
+//        System.out.println(email.send());
 
-        List<Book> books = new ArrayList<>();
-        books.add(new Book("Java", 300));
-        books.add(new Book("Python", 200));
-        books.add(new Book("C++", 100));
+//        int i ;
+//        System.out.println(i);
 
-        System.out.println(books.toString());
-        Collections.sort(books);
-        System.out.println(books.toString());
+//        List<Book> books = new ArrayList<>();
+//        books.add(new Book("Java", 300));
+//        books.add(new Book("Python", 200));
+//        books.add(new Book("C++", 100));
+//
+//        System.out.println(books.toString());
+//        Collections.sort(books);
+//        System.out.println(books.toString());
     }
 }
 

@@ -1,6 +1,6 @@
 package org.example;
 
-public final class NotificationFactory <T extends Notification>{
+public final class NotificationFactory{
     public static Notification getNotification(String type){
         if(type == null)
             throw new IllegalArgumentException();
