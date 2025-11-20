@@ -14,13 +14,29 @@ Bu sinfin qiymətiHesabla adlı abstract metodu olsun.
 öz baza qiymətini gəlsin).
  */
 
-public abstract class Product {
+abstract class Product {
     String name;
     double basePrice;
 
-    public Product(String name, double basePrice) {
+    Product(String name, double basePrice) {
         this.name = name;
         this.basePrice = basePrice;
+    }
+
+    public double getBasePrice() {
+        return basePrice;
+    }
+
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     abstract double calculatePrice();
