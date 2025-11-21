@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java Medium Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .question { margin-bottom: 20px; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+        .choices { margin-top: 8px; }
+        button { padding: 10px 14px; border-radius: 6px; cursor: pointer; }
+        .result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<h1>Medium Java Quiz</h1>
+<form id="quizForm">
+    <div th:each="q : ${questions}" class="question">
+        <div><strong th:text="${q.id} + '. ' + ${q.text}"></strong></div>
+        <div class="choices">
+            <label th:each="c, idx : ${q.choices}">
+                <input type="radio" th:name="${'q' + q.id}" th:value="${idx}"/>
+                <span th:text="${c}"></span>
+            </label>
+        </div>
+    </div>
+    <button type="button" id="submitBtn">Submit</button>
+</form>
+
+
+<div id="result" class="result"></div>
+
+
+<script src="/script.js"></script>
+</body>
+</html>
