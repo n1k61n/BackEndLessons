@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd564f3d-507c-4e51-b6ec-babc30d61579" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../MyProjects/taskmanager/src/main/java/org/example/taskmanager/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/taskmanager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MyProjects/taskmanager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/taskmanager/src/main/java/org/example/taskmanager/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/java/com/example/demo/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/resources/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringBootProjects/demo/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/front/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SpringBootProjects/front/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tests/Test/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tests/Test/src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;n1k61n&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/n1k61n/BackEndLessons.git&quot;,
+    &quot;accountId&quot;: &quot;048ed88a-459e-4fb8-8bec-6b43c9b3cba9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="35PK4JMZ77qvGVKrVLaXyWIFVZ4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.SolutionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SolutionTest.testSomething.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/mamed/GithubProjects/CodeWars/SwapValues/src/main/java/org/example/Main.java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd564f3d-507c-4e51-b6ec-babc30d61579" name="Changes" comment="" />
+      <created>1763006075106</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763006075106</updated>
+    </task>
+    <servers />
+  </component>
+</project>
