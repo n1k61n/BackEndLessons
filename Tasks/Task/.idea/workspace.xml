@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b3a600c-17e4-407e-a357-a0e0b2370127" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../CodeWars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CodeWars/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/src/main/java/org/example/ChatUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/src/main/java/org/example/GeminiAi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/SimpleProject/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/src/main/kotlin/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/src/main/kotlin/Task.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MyProjects/TestKotlin/src/main/kotlin/TaskManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/Fraction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/Mystery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/MysteryColorAnalyzer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/PhotoManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/Robot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test-01/target/classes/org/example/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/target/classes/org/example/ClassA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/Test/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/TestingSomeStuff/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/TestingSomeStuff/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/TestingSomeStuff/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/TestingSomeStuff/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/TestingSomeStuff/target/classes/org/example/MyThread.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;n1k61n&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/n1k61n/BackEndLessons.git&quot;,
+    &quot;accountId&quot;: &quot;048ed88a-459e-4fb8-8bec-6b43c9b3cba9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="34NRkbKgJZSV1EDYomyE8i7LVyt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Geeks.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MyThread.executor": "Run",
+    "JUnit.StringIteratorTest.executor": "Run",
+    "JUnit.StringIteratorTest.whenStringEmpty_thenHasNextFalse.executor": "Run",
+    "JUnit.StringIteratorTest.whenStringNotEmpty_thenHasNextTrue.executor": "Run",
+    "JUnit.StringIteratorTest.whenStringNotEmpty_thenIterateTillEnd.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mamed/GithubProjects/Tasks/Task",
+    "onboarding.tips.debug.path": "C:/Users/mamed/GithubProjects/Task/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Geeks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Geeks" />
+      <module name="Task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="Task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MyThread" />
+      <module name="Task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringIteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StringIteratorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringIteratorTest.whenStringNotEmpty_thenIterateTillEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StringIteratorTest" />
+      <option name="METHOD_NAME" value="whenStringNotEmpty_thenIterateTillEnd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MyThread" />
+        <item itemvalue="Application.Geeks" />
+        <item itemvalue="JUnit.StringIteratorTest" />
+        <item itemvalue="JUnit.StringIteratorTest.whenStringNotEmpty_thenIterateTillEnd" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b3a600c-17e4-407e-a357-a0e0b2370127" name="Changes" comment="" />
+      <created>1761052190143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761052190143</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Task$StringIteratorTest.ic" NAME="StringIteratorTest Coverage Results" MODIFIED="1761996750834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
+  </component>
+</project>
