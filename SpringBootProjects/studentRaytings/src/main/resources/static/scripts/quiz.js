@@ -124,9 +124,9 @@
                 messageDiv.className = 'success message';
                 messageDiv.innerHTML = `TƏBRİKLƏR! 🏆 İmtahan nəticəsi **${finalExamScore.toFixed(2)} bal** olaraq bazaya yazıldı. Yeni Reytinq Balınız: **${result.overallScore.toFixed(2)}**.`;
 
-                setTimeout(() => {
-                     window.location.href = `student-profile.html?id=${studentId}`;
-                }, 3000);
+                 setTimeout(() => {
+                     window.location.href = `student-profile.html?id=${encodeURIComponent(studentId)}`;
+                 }, 3000);
 
             } else {
                 const errorDetails = await response.text();
