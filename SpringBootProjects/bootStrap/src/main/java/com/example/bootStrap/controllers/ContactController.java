@@ -4,11 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-class HomeController {
-
-    @GetMapping("/index.html")
-    String home() {
-        return "index.html";
+public class ContactController {
+    @GetMapping("/contact.html")
+    String about(){
+        return "contact.html";
     }
-
 }
