@@ -19,7 +19,11 @@
 
     function startExam() {
         const studentId = new URLSearchParams(window.location.search).get('id');
-        window.location.href = `/exam.html?id=${studentId}`;
+        if (!isValidId(studentId)) {
+            errorDiv.innerHTML = '<div class="error">Xəta: Etibarlı tələbə ID-si tapılmadı, imtahana keçid mümkün deyil.</div>';
+            return;
+        }
+        window.location.href = `/exam.html?id=${encodeURIComponent(studentId)}`;
     }
 
     async function fetchStudentData(id) {

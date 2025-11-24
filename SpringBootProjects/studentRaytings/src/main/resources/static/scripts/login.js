@@ -39,15 +39,17 @@
                     return id !== null && id !== '' && id !== 'undefined' && !Number.isNaN(Number(id));
                 }
 
-                messageDiv.textContent = `Giriş uğurludur, ${studentName}! Yönləndirilir...`;
-                messageDiv.style.color = 'green';
-
-                // 3. ID-ni URL parametri kimi istifadə edərək yönləndiririk (ilk öncə yoxlama)
+                // Prefer to validate ID before showing a success redirect message.
                 if (!isValidId(studentId)) {
                     messageDiv.textContent = `Giriş uğurludur amma istifadəçi ID-si mövcud deyil.`;
                     messageDiv.style.color = 'orange';
                     return;
                 }
+
+                // Use a safe display name fallback and then redirect.
+                const displayName = (studentName && studentName !== 'undefined') ? studentName : 'istifadəçi';
+                messageDiv.textContent = `Giriş uğurludur, ${displayName}! Yönləndirilir...`;
+                messageDiv.style.color = 'green';
 
                 setTimeout(() => {
                     window.location.href = `student-profile.html?id=${encodeURIComponent(studentId)}`;
