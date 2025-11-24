@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -17,25 +16,21 @@ public class QuestionService {
 
     // count qədər təsadüfi sual çəkir
     public List<Question> getRandomQuestions(int count) {
-        List<Question> allQuestions = questionRepository.findAll();
-
-        if (allQuestions.isEmpty()) {
-            return Collections.emptyList(); // data yoxdursa boş list qaytar
+        // Prefer db-level random selection to avoid duplicates and large-memory shuffles.
+        long total = questionRepository.count();
+        if (total == 0) {
+            return Collections.emptyList();
         }
 
-        // bütün sualları qarışdır
-        Collections.shuffle(allQuestions);
-
-        // count qədər limitlə qaytar, amma toplamdan çox olmayacaq
-        return allQuestions.stream()
-                .limit(Math.min(count, allQuestions.size()))
-                .collect(Collectors.toList());
+        final int limit = (int) Math.min(count, total);
+        return questionRepository.findRandomQuestions(limit);
     }
 
     // 50 random sual üçün shortcut
     public List<Question> get50RandomQuestions() {
-        List<Question> allQuestions = questionRepository.findAll();
-        Collections.shuffle(allQuestions);
-        return allQuestions.stream().limit(Math.min(50, allQuestions.size())).collect(Collectors.toList());
+        long total = questionRepository.count();
+        if (total == 0) return Collections.emptyList();
+        final int limit = (int) Math.min(50, total);
+        return questionRepository.findRandomQuestions(limit);
     }
 }

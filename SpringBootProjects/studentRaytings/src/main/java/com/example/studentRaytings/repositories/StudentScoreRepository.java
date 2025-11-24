@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface StudentScoreRepository extends JpaRepository<StudentScore, Long> {
     List<StudentScore> findAllByOrderByOverallScoreDesc();
+    // Find a StudentScore by the associated Student's id
+    java.util.Optional<com.example.studentRaytings.models.StudentScore> findByStudentId(Long studentId);
 }
