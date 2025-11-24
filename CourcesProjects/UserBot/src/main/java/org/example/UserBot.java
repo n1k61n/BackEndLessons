@@ -11,20 +11,7 @@ public class UserBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if(update.hasMessage()) {
-            String message = update.getMessage().getText();
-            Long chatId = update.getMessage().getChatId();
-
-            GeminiAI geminiAI = new GeminiAI();
-            String text = "";
-            if (message.startsWith("/question"))
-                text = geminiAI.getResponse(message.substring(9) + ". Qisa formatda cavabi ver.");
-            else if (message.startsWith("/translate"))
-                text = geminiAI.getResponse(message.substring(10) + ". Tərcümə et.");
-
-
-            SendMessage sendMessage = new SendMessage();
-            sendMessage.setChatId(String.valueOf(chatId));
-            sendMessage.setText(text);
+            SendMessage sendMessage = getSendMessage(update);
 
 //            SendPhoto sendPhoto = new SendPhoto();
 //            sendPhoto.setChatId(chatId);
@@ -41,6 +28,24 @@ public class UserBot extends TelegramLongPollingBot {
             }
 
         }
+    }
+
+    private static SendMessage getSendMessage(Update update) {
+        String message = update.getMessage().getText();
+        Long chatId = update.getMessage().getChatId();
+
+        GeminiAI geminiAI = new GeminiAI();
+        String text = "";
+        if (message.startsWith("/question"))
+            text = geminiAI.getResponse(message.substring(9) + ". Qisa formatda cavabi ver.");
+        else if (message.startsWith("/translate"))
+            text = geminiAI.getResponse(message.substring(10) + ". Tərcümə et.");
+
+
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.setChatId(String.valueOf(chatId));
+        sendMessage.setText(text);
+        return sendMessage;
     }
 
     @Override

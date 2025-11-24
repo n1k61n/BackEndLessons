@@ -10,4 +10,11 @@
         <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>com.mycompany.demo.Demo</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.genai</groupId>
+            <artifactId>google-genai</artifactId>
+            <version>0.6.1</version>
+        </dependency>
+    </dependencies>
 </project>
