@@ -103,8 +103,16 @@ public class StudentService {
 
     // 3. ID-ə görə telebə tapmaq üçün köməkçi metod (opsional)
     public StudentScore getStudentScoreById(Long id) {
-        return studentScoreRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Student not found with id: " + id));
+        // Previously this method attempted to lookup StudentScore by its own id. The application
+        // treats the 'id' parameter as the Student.id in many places (view controller and login flow),
+        // so we need to find the StudentScore by the associated student's id.
+        return studentScoreRepository.findByStudentId(id)
+            .orElseThrow(() -> new RuntimeException("Student score not found for student id: " + id));
+    }
+    
+    // Safe lookup that returns Optional when a StudentScore may not exist for a Student.id
+    public java.util.Optional<StudentScore> findStudentScoreByStudentId(Long studentId) {
+        return studentScoreRepository.findByStudentId(studentId);
     }
     // 3. ID-ə görə telebə tapmaq üçün köməkçi metod (opsional)
     public Student getStudentById(Long id) {

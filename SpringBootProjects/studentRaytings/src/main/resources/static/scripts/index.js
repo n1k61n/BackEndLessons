@@ -36,7 +36,10 @@ function renderTable(students) {
         else if (position === 3) posCell.classList.add('top-3');
 
         // Digər sütunlar
-        row.insertCell().textContent = student.name;
+        // StudentScore obyektində tələbə məlumatı `student` sahəsində yerləşir
+        const studentEntity = student.student || {};
+        const displayName = ((studentEntity.name || '').trim() + ' ' + (studentEntity.surname || '').trim()).trim();
+        row.insertCell().textContent = displayName || '—';
         row.insertCell().textContent = student.overallScore.toFixed(2);
         row.insertCell().textContent = student.examScore;
         row.insertCell().textContent = student.gpaScore;

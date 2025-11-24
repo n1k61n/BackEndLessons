@@ -22,22 +22,23 @@ public class AuthService {
         if (userRepository.findByEmail(student.getEmail()).isPresent()) {
             throw new RuntimeException("Bu email artıq qeydiyyatdan keçib!");
         }
+        // 1) İlk öncə istifadəçini (Student) bazaya saxlayırıq, beləliklə onun `id` sahəsi olacaq.
+        Student savedStudent = userRepository.save(student);
 
-        // 1. Reytinq üçün yeni 'Student' obyektini yaradırıq
+        // 2) Daha sonra həmin Student-ə aid StudentScore obyektini yaradıb əlaqələndiririk.
         StudentScore newStudentScore = new StudentScore();
+        newStudentScore.setStudent(savedStudent);
         newStudentScore.setGpaScore(0.0);
         newStudentScore.setProjectScore(0.0);
         newStudentScore.setActivityScore(0.0);
         newStudentScore.setExamScore(0.0);
         newStudentScore.setOverallScore(0.0);
 
-        // StudentScore obyektini bazaya yazırıq
+        // StudentScore obyektini bazaya yazırıq (student_id sahəsi dolu olacaq)
         studentScoreRepository.save(newStudentScore);
 
-
-
-        // 3. İstifadəçini bazaya saxlamaq
-        return userRepository.save(student);
+        // 3) Qayıdışda saxlanmış Student obyektini qaytarırıq
+        return savedStudent;
     }
 
     // Giriş (Login) məntiqi

@@ -33,28 +33,4 @@ public class Question {
 
     @Column(name = "correct_answer", nullable = false)
     private String correctAnswer; // Düzgün cavab (A, B, C və ya D)
-
-    // Lombok sayəsində Getter/Setter-lər avtomatik yaradılır.
-
-    // Explicit setters/getters for compatibility when Lombok is not available
-    public Long getId() { return this.id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getQuestionText() { return this.questionText; }
-    public void setQuestionText(String questionText) { this.questionText = questionText; }
-
-    public String getOptionA() { return this.optionA; }
-    public void setOptionA(String optionA) { this.optionA = optionA; }
-
-    public String getOptionB() { return this.optionB; }
-    public void setOptionB(String optionB) { this.optionB = optionB; }
-
-    public String getOptionC() { return this.optionC; }
-    public void setOptionC(String optionC) { this.optionC = optionC; }
-
-    public String getOptionD() { return this.optionD; }
-    public void setOptionD(String optionD) { this.optionD = optionD; }
-
-    public String getCorrectAnswer() { return this.correctAnswer; }
-    public void setCorrectAnswer(String correctAnswer) { this.correctAnswer = correctAnswer; }
 }
