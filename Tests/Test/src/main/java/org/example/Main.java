@@ -12,22 +12,34 @@ import java.util.function.BiFunction;
 
 
 public class Main {
-    static void main() {
-        List<Person> persons = new ArrayList<>();
+    static void main(String[] args) {
+//        List<Person> persons = new ArrayList<>();
+//
+//        persons.add(new Person("Emin", 44));
+//        persons.add(new Person("Orxan", 30));
+//        persons.add(new Person("Kamran", 21));
+//        persons.add(new Person("Emil", 15));
+//
+//
+//        persons.stream()
+//                .filter(name -> name.getName().equals("Emin"))
+//                .forEach(System.out::println);
 
-        persons.add(new Person("Emin", 44));
-        persons.add(new Person("Orxan", 30));
-        persons.add(new Person("Kamran", 21));
-        persons.add(new Person("Emil", 15));
+    }
 
-
-        persons.stream()
-                .filter(name -> name.getName().equals("Emin"))
-                .forEach(System.out::println);
-
-
-
-
+    public static String toAlternativeString(String string) {
+        // your code here!
+        StringBuilder result = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                result.append(Character.toUpperCase(c));
+            } else if (c >= 'A' && c <= 'Z') {
+                result.append(Character.toLowerCase(c));
+            } else {
+                result.append(c);
+            }
+        }
+        return result.toString();
     }
 
     static int add(int a, int b) {

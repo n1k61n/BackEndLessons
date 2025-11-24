@@ -33,7 +33,7 @@ public class Kata {
     };
     public static String subtractSum (int n) {
         //return fruit name like "apple"
-
+        return "";
     }
 
 
