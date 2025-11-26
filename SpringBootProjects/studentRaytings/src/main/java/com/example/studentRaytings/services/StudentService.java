@@ -1,123 +1,66 @@
 package com.example.studentRaytings.services;
 
+
+import com.example.studentRaytings.dtos.StudentRequest;
+import com.example.studentRaytings.dtos.StudentResponse;
+import com.example.studentRaytings.exceptions.NotFoundException;
+import com.example.studentRaytings.mapper.StudentMapper;
 import com.example.studentRaytings.models.Student;
-import com.example.studentRaytings.models.StudentScore;
-import com.example.studentRaytings.repositories.StudentScoreRepository;
 import com.example.studentRaytings.repositories.StudentRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class StudentService {
 
-    @Autowired
-    private StudentRepository studentRepository;// Repository ilə əlaqə qururuq
-    @Autowired
-    private StudentScoreRepository studentScoreRepository;// Repository ilə əlaqə qururuq
-//    List<StudentScore> ranked = student.stream()
-//            .sorted(Comparator.comparingDouble(StudentScore::getExamScore).reversed())
-//            .collect(Collectors.toList());
-//
-//    for (int i = 0; i < ranked.size(); i++) {
-//        ranked.get(i).setRank(i + 1);
-//    }
+    private final StudentRepository repo;
+    private final StudentMapper mapper;
 
-    // Məntiq: Bal katsayılarının təyin edilməsi
-    // Sabitlər (Ümumi cəmi 1.0, yəni 100% olmalıdır)
-    private static final double GPA_WEIGHT = 0.25;      // 25%
-    private static final double PROJECT_WEIGHT = 0.25;  // 25%
-    private static final double ACTIVITY_WEIGHT = 0.20; // 20%
-    private static final double EXAM_WEIGHT = 0.30;     // 30% <--- YENİ
-
-
-    // Ümumi balı hesablayan köməkçi metod
-    private double calculateOverallScore(StudentScore studentScore) {
-        double gpa = studentScore.getGpaScore() != null ? studentScore.getGpaScore() : 0.0;
-        double project = studentScore.getProjectScore() != null ? studentScore.getProjectScore() : 0.0;
-        double activity = studentScore.getActivityScore() != null ? studentScore.getActivityScore() : 0.0;
-        double exam = studentScore.getExamScore() != null ? studentScore.getExamScore() : 0.0;
-
-        return (gpa* GPA_WEIGHT) +
-                (project * PROJECT_WEIGHT) +
-                (activity * ACTIVITY_WEIGHT) +
-                (exam * EXAM_WEIGHT); // <--- İmtahan Balı əlavə edildi
+    public List<StudentResponse> getAll() {
+        return repo.findAllByOrderByTotalScoreDesc()
+                .stream()
+                .map(mapper::toResponse)
+                .toList();
     }
 
-    // 1. Yeni telebəni saxlayır və Ümumi Balını hesablayır
-    public StudentScore saveStudent(StudentScore studentScore) {
-        // İmtahan balı hələ daxil edilməyibsə 0 olsun
-        if (studentScore.getExamScore() == 0) {
-            studentScore.setExamScore(0.0);
-        }
-
-        double overallScore = calculateOverallScore(studentScore);
-        studentScore.setOverallScore(overallScore);
-
-        return studentScoreRepository.save(studentScore);
+    public StudentResponse getOne(Long id) {
+        return mapper.toResponse(
+                repo.findById(id)
+                        .orElseThrow(() -> new NotFoundException("Student tapılmadı: " + id))
+        );
     }
 
-    // 2. İmtahan balını daxil edir və reytinqi yeniləyir (ƏSAS YENİLƏMƏ)
-    public StudentScore updateExamResult(Long studentId, double newExamScore) {
-        StudentScore studentScore = studentScoreRepository.findById(studentId)
-                .orElseThrow(() -> new RuntimeException("Student not found with id: " + studentId));
-
-        // İmtahan balını yenilə
-        studentScore.setExamScore(newExamScore);
-
-        // Ümumi balı yenidən hesabla
-        double updatedOverallScore = calculateOverallScore(studentScore);
-        studentScore.setOverallScore(updatedOverallScore);
-
-        // Bazaya saxla
-        return studentScoreRepository.save(studentScore);
+    public StudentResponse create(StudentRequest dto) {
+        Student s = mapper.toEntity(dto);
+        s.setTotalScore(calcScore(s));
+        return mapper.toResponse(repo.save(s));
     }
 
-    // 1. Yeni telebəni saxlayır və Ümumi Balını (Overall Score) hesablayır
-    public StudentScore saveAndCalculateScore(StudentScore studentScore) {
+    public StudentResponse update(Long id, StudentRequest dto) {
+        Student s = repo.findById(id)
+                .orElseThrow(() -> new NotFoundException("Student tapılmadı: " + id));
 
+        s.setFullName(dto.getFullName());
+        s.setGroupName(dto.getGroupName());
+        s.setTotalExams(dto.getTotalExams());
+        s.setCorrectAnswers(dto.getCorrectAnswers());
+        s.setWrongAnswers(dto.getWrongAnswers());
 
-        // Ümumi balın hesablanması
-        double overallScore = (studentScore.getGpaScore() * GPA_WEIGHT) +
-                (studentScore.getProjectScore() * PROJECT_WEIGHT) +
-                (studentScore.getActivityScore() * ACTIVITY_WEIGHT);
+        s.setTotalScore(calcScore(s));
 
-        // Balı modelə yazırıq
-        studentScore.setOverallScore(overallScore);
-
-        // Verilənlər bazasına saxlayırıq və yenilənmiş obyekti qaytarırıq
-        return studentScoreRepository.save(studentScore);
+        return mapper.toResponse(repo.save(s));
     }
 
-    // 2. Bütün telebələri Ümumi Bala görə azalan sırada qaytarır (Reytinq cədvəli)
-    public List<StudentScore> getStudentRanking() {
-        // Use StudentScoreRepository to return scores ordered by overall score
-        return studentScoreRepository.findAllByOrderByOverallScoreDesc();
+    public void delete(Long id) {
+        if (!repo.existsById(id))
+            throw new NotFoundException("Student tapılmadı: " + id);
+        repo.deleteById(id);
     }
 
-    // Return all StudentScore entries
-    public List<StudentScore> getAllStudentScores() {
-        return studentScoreRepository.findAll();
+    private int calcScore(Student s) {
+        return s.getCorrectAnswers() * 4 - s.getWrongAnswers();
     }
-
-    // 3. ID-ə görə telebə tapmaq üçün köməkçi metod (opsional)
-    public StudentScore getStudentScoreById(Long id) {
-        // Previously this method attempted to lookup StudentScore by its own id. The application
-        // treats the 'id' parameter as the Student.id in many places (view controller and login flow),
-        // so we need to find the StudentScore by the associated student's id.
-        return studentScoreRepository.findByStudentId(id)
-            .orElseThrow(() -> new RuntimeException("Student score not found for student id: " + id));
-    }
-    
-    // Safe lookup that returns Optional when a StudentScore may not exist for a Student.id
-    public java.util.Optional<StudentScore> findStudentScoreByStudentId(Long studentId) {
-        return studentScoreRepository.findByStudentId(studentId);
-    }
-    // 3. ID-ə görə telebə tapmaq üçün köməkçi metod (opsional)
-    public Student getStudentById(Long id) {
-        return studentRepository.findById(id).orElseThrow(() -> new RuntimeException("Student not found with id: " + id));
-    }
-
-
 }

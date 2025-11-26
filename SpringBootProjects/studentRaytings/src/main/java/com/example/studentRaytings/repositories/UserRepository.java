@@ -10,6 +10,8 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<Student, Long> {
 
-    // Spring Data JPA metod konvensiyası: Email-ə görə istifadəçi tapmaq
+    
     Optional<Student> findByEmail(String email);
+    Optional<Student> findByGroupName(String groupName);
+
 }
