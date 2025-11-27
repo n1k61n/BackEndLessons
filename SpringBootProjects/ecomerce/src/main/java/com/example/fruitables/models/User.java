@@ -8,6 +8,8 @@ import lombok.Setter;
 import org.springframework.resilience.annotation.EnableResilientMethods;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Setter
@@ -22,4 +24,12 @@ public class User {
     private String name;
 
     private BigDecimal cashback;
+    
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    private String password;
+
+    // @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    // private List<Order> orders = new ArrayList<>();
 }
