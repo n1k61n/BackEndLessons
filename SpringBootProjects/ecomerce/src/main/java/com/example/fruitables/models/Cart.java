@@ -23,14 +23,12 @@ public class Cart {
     @JoinColumn(name = "user_id")
     private User user;
 
-<<<<<<< HEAD
+
     @OneToMany(mappedBy = "cart")
     private List<CartItem> cartItems;
-=======
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
 
     private Integer quantity;
->>>>>>> 134365bff4f968ae47ace3baed81d2b596f130a1
 }

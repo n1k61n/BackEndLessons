@@ -5,15 +5,15 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@Builder
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,10 +29,16 @@ public class User {
     private String password;
 
 
+    @Column(name = "is_writer")
     private Boolean isWriter;
+    @Column(name = "is_admin")
     private Boolean isAdmin;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author")
     private List<Post> posts;
 
 }

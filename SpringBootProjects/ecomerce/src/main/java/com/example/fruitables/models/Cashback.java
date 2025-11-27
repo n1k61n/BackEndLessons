@@ -15,16 +15,17 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "cashbacks")
 public class Cashback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(precision = 12, scale = 2)
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(precision = 12, scale = 2)
-    private Double percent;
+    private BigDecimal percent;
 
     private LocalDateTime createDate;
 

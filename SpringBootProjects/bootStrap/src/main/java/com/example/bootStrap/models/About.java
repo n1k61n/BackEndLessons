@@ -4,20 +4,23 @@ package com.example.bootStrap.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@Builder
+@Entity
+@Table(name = "about")
 public class About {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Column(name = "main_title")
     private String mainTitle;
+    @Column(name = "sub_title")
     private String subTitle;
-    private String imageUrl;
+    @Column(name = "photo_url")
+    private String photoUrl;
     private String content;
+    private String description;
 }

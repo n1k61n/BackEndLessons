@@ -6,11 +6,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "cart_items")
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +23,10 @@ public class CartItem {
     private Product product;
 
     @Column(precision = 12, scale = 2)
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(precision = 12, scale = 2)
-    private Double percent;
+    private BigDecimal percent;
 
     @ManyToOne
     private Cart cart;

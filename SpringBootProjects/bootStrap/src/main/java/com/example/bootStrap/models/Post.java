@@ -4,29 +4,38 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "posts")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@Builder
+@Table(name = "posts")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String headerTitle;
+    @Column(name = "main_title")
+    private String mainTitle;
+    @Column(name = "sub_title")
     private String subTitle;
-    private String headerImageUrl;
-    private String subImageUrl;
+    @Column(name = "photo_url")
+    private String photoUrl;
+
+    @Column(name = "header_photo_url")
+    private String headerPhotoUrl;
     private String content;
+    private String description;
 
     @ManyToOne
     private User author;
 
-    private LocalDate createDate;
-    private LocalDate updateDate;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+    @Column(name = "is_published")
     private Boolean isPublished;
 }
