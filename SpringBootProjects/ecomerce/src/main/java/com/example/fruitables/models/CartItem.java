@@ -6,21 +6,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Entity
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cart {
+public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    private User user;
+    private Product product;
 
-    @OneToMany(mappedBy = "cart")
-    private List<CartItem> cartItems;
+    @Column(precision = 12, scale = 2)
+    private Double amount;
+
+    @Column(precision = 12, scale = 2)
+    private Double percent;
+
+    @ManyToOne
+    private Cart cart;
+
+    private Integer quantity;
 }

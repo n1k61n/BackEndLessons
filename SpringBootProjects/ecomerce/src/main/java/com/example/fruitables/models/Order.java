@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Cart {
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,6 +21,6 @@ public class Cart {
     @ManyToOne
     private User user;
 
-    @OneToMany(mappedBy = "cart")
-    private List<CartItem> cartItems;
+    @OneToMany(mappedBy = "order")
+    private List<OrderItem> orderItems;
 }
