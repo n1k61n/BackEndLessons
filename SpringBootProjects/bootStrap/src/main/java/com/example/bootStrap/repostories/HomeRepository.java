@@ -1,7 +1,7 @@
 package com.example.bootStrap.repostories;
 
-import com.example.bootStrap.models.Home;
+import com.example.bootStrap.models.Banner;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface HomeRepository extends JpaRepository<Home, Long> {
+public interface HomeRepository extends JpaRepository<Banner, Long> {
 }

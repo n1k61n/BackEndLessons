@@ -7,19 +7,20 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "cashbacks")
-public class Cashback {
+@Table(name = "cart_items")
+public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    private Product product;
 
     @Column(precision = 12, scale = 2)
     private BigDecimal amount;
@@ -27,8 +28,8 @@ public class Cashback {
     @Column(precision = 12, scale = 2)
     private BigDecimal percent;
 
-    private LocalDateTime createDate;
-
     @ManyToOne
-    private User user;
+    private Cart cart;
+
+    private Integer quantity;
 }
