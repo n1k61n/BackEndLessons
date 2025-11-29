@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.resilience.annotation.EnableResilientMethods;
+
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -30,6 +30,6 @@ public class User {
 
     private String password;
 
-    // @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    // private List<Order> orders = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    private List<Order> orders = new ArrayList<>();
 }
