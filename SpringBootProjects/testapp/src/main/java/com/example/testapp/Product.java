@@ -1,7 +1,13 @@
 package com.example.testapp;
 
 import jakarta.persistence.*;
-import lombok.*;
+
+import java.math.BigDecimal;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Getter
@@ -17,11 +23,17 @@ public class Product {
     @Column(name = "product_name", nullable = false, length = 100)
     private String name;
 
-    private Double price;
+    @Column(nullable = false)
+    private BigDecimal price;
 
-    public Product(String name, Double price) {
+    private String category;
+    private Integer stock;
+
+    public Product(String name, BigDecimal price, String category) {
         this.name = name;
         this.price = price;
+        this.category = category;
+        this.stock = 0;
     }
 
 }
