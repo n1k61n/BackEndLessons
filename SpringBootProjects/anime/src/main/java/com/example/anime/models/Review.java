@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "anime_review")
+@Table(name = "anime_review") // Və ya sadəcə "reviews"
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -17,22 +17,25 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Link the review back to the Anime title
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "anime_id", nullable = false)
-    private Anime anime;
+    private String content;
 
-    // Link the review to the User who wrote it
-    @ManyToOne(fetch = FetchType.LAZY)
+    @Column(name = "created_at", updatable = false) // Yaradılma vaxtı yenilənməməlidir
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+    // DÜZƏLİŞ 1: User əlaqəsi
+    // --------------------------------------------------------------------------------
+    // 'userId' əvəzinə 'User' Entity istifadə olunur.
+    @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+    // --------------------------------------------------------------------------------
 
-    @Column(name = "rating")
-    private Integer rating; // Rating out of 5 or 10
-
-    @Column(name = "comment", columnDefinition = "TEXT")
-    private String comment;
-
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    // DÜZƏLİŞ 2: Anime əlaqəsi
+    // --------------------------------------------------------------------------------
+    // 'animeId' əvəzinə 'Anime' Entity istifadə olunur.
+    // Bu sahə Anime.java-dakı @OneToMany(mappedBy = "anime") ilə uyğunlaşır.
+    @ManyToOne
+    @JoinColumn(name = "anime_id", nullable = false)
+    private Anime anime;
+    // --------------------------------------------------------------------------------
 }

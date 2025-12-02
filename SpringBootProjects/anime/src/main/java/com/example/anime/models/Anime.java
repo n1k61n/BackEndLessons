@@ -1,42 +1,63 @@
 package com.example.anime.models;
 
-import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Represents an Anime or Movie entry from the website listing.
- */
+import com.example.anime.enums.AnimeStatus;
+import jakarta.persistence.*;
+import lombok.*;
+
+
 @Entity
-@Table(name = "anime_title")
-@Data // Generates getters, setters, toString, equals, and hashCode methods
-@NoArgsConstructor // Generates a constructor with no parameters
-@AllArgsConstructor // Generates a constructor with all parameters
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "anime")
 public class Anime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title", nullable = false)
     private String title;
 
-    @Column(name = "genre")
-    private String genre; // e.g., "Adventure", "Action"
+    @Column(columnDefinition = "TEXT") // Məlumatın uzunluğunu artırmaq üçün tövsiyə olunur
+    private String description;
 
-    @Column(name = "description", columnDefinition = "TEXT")
-    private String description; // Short synopsis (e.g., "After 30 days of travel...")
+    @Column(name = "release_date")
+    private LocalDateTime releaseDate;
 
-    @Column(name = "status")
-    private String status; // e.g., "Active Movie", "Recently Added"
+    @Column(name = "image_url")
+    private String imageUrl;
 
-    @Column(name = "episode_count")
-    private Integer episodeCount; // Total number of episodes
+    // DÜZƏLİŞ 1: Status Field
+    // ----------------------------------------------------------------------
+    // @ManyToOne SİLİNDİ, çünki String @Entity sinfi deyil.
+    @Enumerated(EnumType.STRING) // Ən yaxşı təcrübə: Enum istifadə edin və bazada STRING kimi saxlayın
+    private AnimeStatus status; // Bu, ayrı bir Enum sinfi olmalıdır (aşağıya baxın)
+    // ----------------------------------------------------------------------
 
-    @Column(name = "current_views")
-    private Long currentViews; // The "9141" or "19.141 Viewes" metric
+    @Column(name = "views")
+    private Integer views;
 
-    @Column(name = "release_year")
-    private Integer releaseYear;
+    // Yadda saxlayın ki, 'rayting' deyil, 'rating' (reytinq) ingilis dilindədir.
+    // Verilənlər bazası sütun adı üçün @Column istifadə etmək tövsiyə olunur.
+    @Column(name = "rating")
+    private Integer rating;
+
+    @OneToMany(mappedBy = "anime")
+    // DÜZƏLİŞ 2: Review Entity'si ilə əlaqə (Güman edilir ki, Review-da Anime növündə bir sahə var)
+    private List<Review> reviews = new ArrayList<>(); // Yeni List başlatmaq yaxşı təcrübədir
+
+    @ManyToMany
+    @JoinTable(
+            name = "anime_genre",
+            joinColumns = @JoinColumn(name = "anime_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    private List<Genre> genres = new ArrayList<>();
+
+
 }

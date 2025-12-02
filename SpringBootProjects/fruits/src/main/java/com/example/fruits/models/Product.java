@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -18,22 +20,31 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+
     private String name;
 
+    @Column(unique = true, length = 10)
+    private String barcode;
+
+    @Column(unique = true)
+    private String sku;
+
+    @Column(precision = 12, scale = 2)
+    private BigDecimal price;
+    private BigDecimal discount;
+
+    @Column(columnDefinition = "TEXT")
     private String description;
+    private String shortDescription;
 
-    @Column(nullable = false)
-    private Double price; // Vahid qiyməti
 
-    private String unit; // Məsələn: "kq", "ədəd", "qutu"
+    private String stock;
+    @Column(name="image_url")
+    private String imageUrl;
 
-    private String imageUrl; // Vebsaytda göstərilən məhsulun şəkli
-
-    // Məhsulun hansı Kateqoriyaya aid olduğunu göstərir
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", nullable = false)
+    @ManyToOne
     private Category category;
 
-
+    @ManyToOne
+    private Cart cart;
 }
