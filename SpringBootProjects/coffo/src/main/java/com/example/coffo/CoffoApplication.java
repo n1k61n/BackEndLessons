@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CoffoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoffoApplication.class, args);
+        SpringApplication.run(CoffoApplication.class, args);
 	}
 
 }
